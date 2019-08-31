@@ -8,7 +8,7 @@
   - [Run](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Run)
   - [Adopt](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Adopt)
   - [Contribute](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Contribute)
-    - [Contributor License](https://github.com/smartcitiesdata/smartcitiesdata/wiki/CLA)
+    - [Contributor License](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Contributor-License)
   - [Contact](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Contact)
 * [Resources](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Resources)
 * [Glossary](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Glossary)
