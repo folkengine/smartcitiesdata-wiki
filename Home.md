@@ -5,7 +5,7 @@ We're glad you're here 😃
 The goal of this wiki is to centralize documentation around the Smart Cities Data project and make it easier for the core team to maintain while simultaneously making it easier for you to learn about the project and hopefully adopt it for yourself and contribute back.
 
 Read on to learn about:
-* What is the project and how it works
+* [What is the project and how it works](https://github.com/smartcitiesdata/smartcitiesdata/wiki/The-What)
 * What all those application names mean
 * How to run and use the code
 * How to contribute
