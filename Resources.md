@@ -15,4 +15,7 @@
 * [Elixir - Elixir School](https://elixirschool.com/en/)
 * [Elixir for Programmers - Dave Thomas](https://codestool.coding-gnome.com/courses/elixir-for-programmers)
 * [Kubernetes - kubernetes.io](https://kubernetes.io/docs/tutorials/)
+* [Introduction to Kubernetes - The Linux Foundation](https://training.linuxfoundation.org/training/introduction-to-kubernetes/)
+* [Kubernetes the Hard Way - Kelsey Hightower](https://github.com/kelseyhightower/kubernetes-the-hard-way)
 * [Kafka - Simplilearn](https://www.youtube.com/watch?v=U4y2R3v9tlY)
+* [Getting Started with Apache Kafka - Pluralsight](https://www.pluralsight.com/courses/apache-kafka-getting-started)
