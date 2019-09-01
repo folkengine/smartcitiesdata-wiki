@@ -6,12 +6,12 @@ The goal of this wiki is to centralize documentation around the Smart Cities Dat
 
 Read on to learn about:
 * [What is the project and how it works](https://github.com/smartcitiesdata/smartcitiesdata/wiki/The-What)
-* [What all those application names mean]()
-* [How to run and use the code]()
-* [How to contribute]()
-* [How to contact the team]
-* [Additional learning resources]
-* [A glossary of terms and technologies]
+* [What all those application names mean](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Names)
+* [How to run and use the code](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Run)
+* [How to contribute](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Contribute)
+* [How to contact the team for help](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Contact)
+* [Additional learning resources](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Resources)
+* [A glossary of terms and technologies](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Glossary)
 
 We look forward to growing a robust community around this project and doing some truly challenging and disruptive things in the space of Smart and Connected cities, industries, and organizations, IoT processing, and data analytics. Please join us and if you have any questions, feel free to reach out and ask!
 
