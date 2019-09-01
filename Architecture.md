@@ -1,1 +1,1 @@
-![scdp architecture diagram](scdp_arch.png?raw=true "scdp architecture")
+![scdp architecture diagram](https://github.com/smartcitiesdata/smartcitiesdata/blob/master/scdp_arch.png?raw=true "scdp architecture")
