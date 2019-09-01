@@ -1,1 +1,7 @@
-# Coming Soon!
+We believe it is only right to ensure we have the agreement of our contributors to use their work, whether it be code or documentation.
+
+Therefore, we ask all contributors to sign a contributor license agreement (CLA). CLAs are generally common and accepted in most Open Source software projects. We all wish for the Smart Cities Data Platform to be used and distributed as widely as possible, and for its users to be confident about the origins and continuing availability of the code. The CLA help us achieve that goal.
+
+The CLA is a license agreement, which enables the Smart Cities Data team to distribute your code without restriction. It doesn't require you to assign to the project any copyright you have, the ownership of which remains in full with you. It _does_ mean you cannot withdraw permission for its use at a later date.
+
+The next step is for you to select the appropriate agreement based on the terms of your engagement with the codebase (either as an individual or an employee of a corporation), read the terms, and once comfortable, complete the signature process. After this, you will receive a copy of the agreement by email, and we can start to use your valued contribution within the different components of the project.
