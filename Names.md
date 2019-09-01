@@ -7,7 +7,7 @@ What follows is an explanation of the library and microservice names that make u
 Andi is the microservice providing a RESTful API for administrative management of the data and organizations stored within the platform. Andi is a backronym, standing for "Administrative New Data Interface" and was chosen because of the original project's user persona developed for a theoretical system administrator, named Andy.
 
 ## Carpenter
-Carpenter is a microservice that creates tables in the database. _rimshot_
+Carpenter is a microservice that creates tables in the database.  _*rimshot*_
 
 ## Discovery API/Streams/UI
 The three complementary microservices providing end users with access to interact with the data in the platform. They allow programmatic access via a RESTful API, provide persistent web sockets for streaming data, and a React-based graphical web interface respectively, allowing users to discover the data and insights from it (this one's pretty straightforward).
