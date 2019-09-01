@@ -5,6 +5,7 @@
     - [Application Names](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Names)
   - [Roadmap](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Roadmap)
 * [The How](https://github.com/smartcitiesdata/smartcitiesdata/wiki/The-How)
+  - [Setup](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Setup)
   - [Run](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Run)
   - [Adopt](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Adopt)
   - [Contribute](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Contribute)
