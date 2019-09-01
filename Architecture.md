@@ -1,1 +1,1 @@
-![scdp architecture diagram](./scdp_arch.png?raw=true "scdp architecture")
+![scdp architecture diagram](scdp_arch.png?raw=true "scdp architecture")
