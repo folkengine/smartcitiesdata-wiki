@@ -1,9 +1,4 @@
-# Elixir
-The easiest way to get started with Elixir on macOS is via Homebrew. With Homebrew installed, run the `brew install elixir`
-
-While this will get you up and running quickly, you may also consider installing Elixir and Erlang via the [asdf](https://github.com/asdf-vm/asdf) version manager. This will allow you to have a per-project version of Elixir and allow backward compatibility of versions without enforcing a single global version across your entire machine.
-
-## asdf-vm
+# asdf-vm
 asdf version manager is a great tool that will make it easy to manage multiple versions of dozens of languages and CLI tools. It's worth your time to set up. Best of all, it standardizes the version management interface across macOS and Linux.
 
 To install, clone the code directly from the project repository with the command `git clone https://github.com/asdf-vm/asdf.git ~/.asdf` and add the tool to your path by adding the following lines to your `.bashrc` or `.bash_profile`:
@@ -11,6 +6,13 @@ To install, clone the code directly from the project repository with the command
 `. $HOME/.asdf/completions/asdf.bash`
 
 Once asdf is installed you can run `asdf plugin-add <name>` (elixir for instance) to install the language plugin, list all available versions of the language with `asdf list-all <name>`, install the desired version with `asdf install <name> <version>`, and once installed, set the global version of the language with `asdf global <name> <version>` or a project-specific version of the language by changing into the project directory and typing `asdf local <name> <version>`
+
+The following dependencies are also necessary for asdf to function as expected and can be installed via the single Homebrew command `brew install coreutils automake autoconf openssl libyaml readline libxslt libtool unixodbc unzip curl`
+
+# Elixir
+The easiest way to get started with Elixir on macOS is via Homebrew. With Homebrew installed, run the `brew install elixir`
+
+While this will get you up and running quickly, you may also consider installing Elixir and Erlang via the [asdf](https://github.com/asdf-vm/asdf) version manager. This will allow you to have a per-project version of Elixir and allow backward compatibility of versions without enforcing a single global version across your entire machine.
 
 # Nodejs
 Again, the easiest way to install Nodejs is from the project's official [download](https://nodejs.org/en/download/) page. Clicking the icon for the macOS platform will download a `.pkg` file that will open the Nodejs install wizard and walk you through the process.
