@@ -15,3 +15,13 @@ Speaking of which, if you _do_ discover bugs or have a great idea for a new feat
 It's up to you to argue for your idea and make the case it's valuable to be added to the platform for the benefit of everyone.
 
 # Testing
+Before any pull requests can be accepted into the project all tests for the repo being modified must be in a passing state. To avoid going down a rabbit hole with an incompatible environment, setup, or unexpected bug, it's a good idea to run all the tests when you first clone the repo or fetch the latest changes to ensure it's starting in a green state.
+
+As you modify the code, ensure that you're adding tests accordingly or updating existing tests based on your changes. There's not hard and fast rule for code coverage, but the reviewers will ask for additional test coverage if they feel the new code isn't covered adequately. 
+
+There's also no hard and fast rule for whether or not a function or component should be validated with unit tests or integration tests. Use your best judgement and try to cover all of the success and failure scenarios you can imagine. Keep the [testing pyramid](https://martinfowler.com/articles/practical-test-pyramid.html) in mind and apply your efforts accordingly. Mocks and stubs should be applied strategically and sparingly; for validating small functions they're ideal but with containerization technology making it simple and fast to stand up almost any service dependency it's better to just write an integration test to capture a more "production-like" scenario whenever possible.
+
+# Review
+When you're ready to submit your change for review, commit and open a pull request against the origin repository. At least one member of the core team must review and approve the request although don't be surprise if more give feedback.
+
+If changes are required to bring the pull request into the master branch, the reviewer(s) will leave appropriate comments on the pull request explaining and issues and making suggestions for how to mitigate them. These will typically be explicitly technical in nature unless a particular stylistic choice is counter to the norms of the community, or is too confusing or ambiguous. Please be polite and respectful during the discussion process but don't be afraid to make your case to the team if you feel strongly about anything.
