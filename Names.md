@@ -4,7 +4,7 @@ Like any good software project, the Smart Cities Data platform is built on a hea
 What follows is an explanation of the library and microservice names that make up the project.
 
 ## Andi
-Andi is the microservice providing a RESTful API for administrative management of the data and organizations stored within the platform. Andi is a backronym, standing for "Administrative New Data Interface" and was chosen because of the original project's user persona developed for a theoretical system administrator, named Andy.
+Andi is the microservice providing a RESTful API for administrative management of the data and organizations stored within the platform. Andi is an acronym, standing for "Administrative New Data Interface" and was chosen because of the original project's user persona developed for a theoretical system administrator, named Andy.
 
 ## Carpenter
 Carpenter is a microservice that creates tables in the database.  _*rimshot*_
