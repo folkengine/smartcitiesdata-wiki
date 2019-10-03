@@ -19,3 +19,8 @@
 * [Kubernetes the Hard Way - Kelsey Hightower](https://github.com/kelseyhightower/kubernetes-the-hard-way)
 * [Kafka - Simplilearn](https://www.youtube.com/watch?v=U4y2R3v9tlY)
 * [Getting Started with Apache Kafka - Pluralsight](https://www.pluralsight.com/courses/apache-kafka-getting-started)
+* [Presto - Presto.io](https://prestodb.github.io)
+* [React - Getting Started](https://reactjs.org/docs/getting-started.html)
+* [Docker - Get Started](https://docs.docker.com/get-started/)
+* [Amazon S3 - Getting Started](https://aws.amazon.com/s3/getting-started/)
+* [Object-based storage](https://en.wikipedia.org/wiki/Object_storage)
