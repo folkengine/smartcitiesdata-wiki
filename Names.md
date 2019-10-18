@@ -3,7 +3,7 @@ Like any good software project, the Smart Cities Data platform is built on a hea
 
 What follows is an explanation of the library and microservice names that make up the project.
 
-## [Andi](https://github.com/smartcitiesdata/andi)
+## [Flair](https://github.com/smartcitiesdata/smartcitiesdata/apps/andi)
 Andi is the microservice providing a RESTful API for administrative management of the data and organizations stored within the platform. Andi is an acronym, standing for "Administrative New Data Interface" and was chosen because of the original project's user persona developed for a theoretical system administrator, named Andy.
 
 ## Carpenter (deprecated)
@@ -12,22 +12,22 @@ Carpenter is a microservice that creates tables in the database.  _*rimshot*_
 ## Discovery [API](https://github.com/smartcitiesdata/discovery_api)/[Streams](https://github.com/smartcitiesdata/discovery_streams)/[UI](https://github.com/smartcitiesdata/react_discovery_ui)
 The three complementary microservices providing end users with access to interact with the data in the platform. They allow programmatic access via a RESTful API, provide persistent web sockets for streaming data, and a React-based graphical web interface respectively, allowing users to discover the data and insights from it (this one's pretty straightforward).
 
-## Divo
+## [Divo](https://github.com/smartcitiesdata/divo)
 An acronym standing for "Docker Integration and Validation Orchestrator"; Divo is a library for providing integration testing functionality of Elixir applications via the Docker and Docker-Compose tools and orchestrating them natively within the Elixir Mix tool.
 
-## Flair
+## [Flair](https://github.com/smartcitiesdata/smartcitiesdata/apps/flair)
 Flair is a microservice that analyzes dataset ingestion operations and statistically profiles them before writing the results to a metadata table within the platform storage backend. It is named for the WWE star Ric Flair because it "styles and profiles" the data.
 
-## Forklift
+## [Forklift](https://github.com/smartcitiesdata/smartcitiesdata/apps/forklift)
 Forklift is a microservice that lifts batches of data messages off the ingestion pipeline and into the S3 storage backend via the PrestoDB SQL engine, much as a forklift lifts pallets of materials into place.
 
-## Genesis
+## Genesis (deprecated)
 Genesis is the "creator" of Kafka topics for publicizing streaming datasets to a web socket. It is named for the 80's British Rock band of the same name.
 
-## KDP
+## [KDP](https://github.com/smartcitiesdata/kdp)
 A Kubernetes deployment of the microservices and software components that make up the platform's storage backend (PrestoDB coordinator and workers, Hive Metastore, PostgreSQL database, and Minio S3 object store). It is an acronym standing for _Kubernetes Data Platform_ and was named in response to the _Hortonworks Data Platform_ it replaced on the project when the team pivoted to a more cloud native implementation of a big data storage engine.
 
-## Odo
+## [Odo](https://github.com/smartcitiesdata/odo)
 Odo is a microservice that converts shapefiles (a common geospatial data format) into geojson (another common geospatial data format, but easier to work with). Because the service changes the shape of files, it is named for the shapeshifting alien of the same name from the television series Star Trek: Deep Space 9
 
 ## Prestige
