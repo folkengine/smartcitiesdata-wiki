@@ -30,32 +30,32 @@ A Kubernetes deployment of the microservices and software components that make u
 ## [Odo](https://github.com/smartcitiesdata/odo)
 Odo is a microservice that converts shapefiles (a common geospatial data format) into geojson (another common geospatial data format, but easier to work with). Because the service changes the shape of files, it is named for the shapeshifting alien of the same name from the television series Star Trek: Deep Space 9
 
-## Prestige
+## [Prestige](https://github.com/smartcitiesdata/prestige)
 A library providing an Elixir driver for the PrestoDB SQL engine. It is named for the word's similarity to the Presto name and for the 206 movie of the same name staring Hugh Jackman and Christian Bale (itself a novel by Christopher Priest and a reference to the "third act of every magic trick")
 
-## Reaper
+## [Reaper](https://github.com/smartcitiesdata/reaper)
 Reaper is the microservice that sits at the outer edge of the platform and retrieves data from various sources and formats, initially downloading it and writing it into the ingestion pipeline. It is named for the farming and harvesting term meaning "to gather" the data for consumption.
 
-## Smart City
+## [Smart City](https://github.com/smartcitiesdata/smart_city)
 A central library for standardizing logic specific to the domain of the platform across its many microservices.
 
-## Smart City Data
+## Smart City Data (archived)
 A central library for standardizing the logic and structure around the data messages that flow through the platform ingestion pipeline. From a period of early rapid iteration and experimentation when overly centralizing library logic caused the team to block itself updating the same shared code concurrently.
 
-## Smart City Test
+## [Smart City Test](https://github.com/smartcitiesdata/smart_city_test)
 A library developed specifically for standardizing the testing process of the various platform microservices.
 
-## Streaming Metrics
+## [Streaming Metrics](https://github.com/smartcitiesdata/streaming_metrics)
 A library developed to facilitate the gathering of internal data points for health and performance monitoring of various platform components, standardized across the Kubernetes containerized workloads and the cloud provider's infrastructure. Not especially esoteric but it does carry the "streaming" name from the period of the platform's evolution when streaming data processing was still disconnected from legacy handling of static datasets.
 
-## Streisand
+## [Streisand](https://github.com/smartcitiesdata/streisand)
 Streisand is a microservice that reads messages specifically from streaming datasets off the end of the ingestion pipeline (just prior to their being uploaded to the storage backend) and sends them to be streamed back out of the system via web socket. Because it "publicizes" data, it is ironically named for the [Streisand Effect](https://en.wikipedia.org/wiki/Streisand_effect), or the tendency for information on the Internet desired to be hidden or removed to be more actively shared and publicized as a result of attempted obfuscation.
 
-## Valkyrie
+## [Valkyrie](https://github.com/smartcitiesdata/valkyrie)
 Valkyrie is a microservice that processes data messages and validates or normalizes them according to the schema that was supplied as part of their dataset's definition. Messages that are too distorted from their expected format are discarded. The service was named for the Norse mythological female warriors who judged the dead for worthiness to be accepted into the glorious afterlife of warriors, Valhalla.
 
-## Voltron
+## [Voltron](https://github.com/smartcitiesdata/voltron)
 Voltron is a microservice used to apply arbitrary transformations against dataset messages based on a list of transformation functions supplied with the dataset definition for those messages. Like the eponymous mecha from the classic Japanese cartoon of the same name, it is an aggregation of "transformers".
 
-## Yeet
+## Yeet (deprecated)
 A library for standardizing platform logic around sending data messages that cannot be properly processed to a "dead letter queue". A totally safe search on UrbanDictionary.com for the term yields the definition: "to discard an item at high velocity".
