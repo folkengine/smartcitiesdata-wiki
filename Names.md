@@ -3,7 +3,7 @@ Like any good software project, the Smart Cities Data platform is built on a hea
 
 What follows is an explanation of the library and microservice names that make up the project.
 
-## [Flair](https://github.com/smartcitiesdata/smartcitiesdata/apps/andi)
+## [Andi](https://github.com/smartcitiesdata/smartcitiesdata/tree/master/apps/andi)
 Andi is the microservice providing a RESTful API for administrative management of the data and organizations stored within the platform. Andi is an acronym, standing for "Administrative New Data Interface" and was chosen because of the original project's user persona developed for a theoretical system administrator, named Andy.
 
 ## Carpenter (deprecated)
@@ -15,10 +15,10 @@ The three complementary microservices providing end users with access to interac
 ## [Divo](https://github.com/smartcitiesdata/divo)
 An acronym standing for "Docker Integration and Validation Orchestrator"; Divo is a library for providing integration testing functionality of Elixir applications via the Docker and Docker-Compose tools and orchestrating them natively within the Elixir Mix tool.
 
-## [Flair](https://github.com/smartcitiesdata/smartcitiesdata/apps/flair)
+## [Flair](https://github.com/smartcitiesdata/smartcitiesdata/tree/master/apps/flair)
 Flair is a microservice that analyzes dataset ingestion operations and statistically profiles them before writing the results to a metadata table within the platform storage backend. It is named for the WWE star Ric Flair because it "styles and profiles" the data.
 
-## [Forklift](https://github.com/smartcitiesdata/smartcitiesdata/apps/forklift)
+## [Forklift](https://github.com/smartcitiesdata/smartcitiesdata/tree/master/apps/forklift)
 Forklift is a microservice that lifts batches of data messages off the ingestion pipeline and into the S3 storage backend via the PrestoDB SQL engine, much as a forklift lifts pallets of materials into place.
 
 ## Genesis (deprecated)
