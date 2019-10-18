@@ -11,6 +11,7 @@ Carpenter is a microservice that creates tables in the database.  _*rimshot*_
 
 ## Discovery [API](https://github.com/smartcitiesdata/discovery_api)/[Streams](https://github.com/smartcitiesdata/discovery_streams)/[UI](https://github.com/smartcitiesdata/react_discovery_ui)
 The three complementary microservices providing end users with access to interact with the data in the platform. They allow programmatic access via a RESTful API, provide persistent web sockets for streaming data, and a React-based graphical web interface respectively, allowing users to discover the data and insights from it (this one's pretty straightforward).
+Discovery UI should be wrapped in some kind of branding. As an example, Columbus uses [this repo](https://github.com/SmartColumbusOS/discovery_ui) as its brand wrapper
 
 ## [Divo](https://github.com/smartcitiesdata/divo)
 An acronym standing for "Docker Integration and Validation Orchestrator"; Divo is a library for providing integration testing functionality of Elixir applications via the Docker and Docker-Compose tools and orchestrating them natively within the Elixir Mix tool.
