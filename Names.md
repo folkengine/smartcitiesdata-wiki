@@ -3,13 +3,13 @@ Like any good software project, the Smart Cities Data platform is built on a hea
 
 What follows is an explanation of the library and microservice names that make up the project.
 
-## Andi
+## [Andi](https://github.com/smartcitiesdata/andi)
 Andi is the microservice providing a RESTful API for administrative management of the data and organizations stored within the platform. Andi is an acronym, standing for "Administrative New Data Interface" and was chosen because of the original project's user persona developed for a theoretical system administrator, named Andy.
 
-## Carpenter
+## Carpenter (deprecated)
 Carpenter is a microservice that creates tables in the database.  _*rimshot*_
 
-## Discovery API/Streams/UI
+## Discovery [API](https://github.com/smartcitiesdata/discovery_api)/[Streams](https://github.com/smartcitiesdata/discovery_streams)/[UI](https://github.com/smartcitiesdata/react_discovery_ui)
 The three complementary microservices providing end users with access to interact with the data in the platform. They allow programmatic access via a RESTful API, provide persistent web sockets for streaming data, and a React-based graphical web interface respectively, allowing users to discover the data and insights from it (this one's pretty straightforward).
 
 ## Divo
