@@ -210,7 +210,7 @@ operator that makes deploying/running Kafka in Kubernetes easier.
           plain: {}
           tls: {}
         config:
-          offsets.topic.replication.factor: 3
+          offsets.topic.replication.factor: 1
           transaction.state.log.replication.factor: 3
           transaction.state.log.min.isr: 2
         storage:
