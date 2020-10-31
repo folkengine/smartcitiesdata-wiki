@@ -31,6 +31,30 @@
     ```bash
     `kubectl get pods -n <NAME_SPACE>`
     ```
+  * To describe the pod:
+    ```bash
+    `kubectl describe pod <POD_NAME> -n <NAME_SPACE>`
+    ```
+  * To execute the pod:
+    ```bash
+    `kubectl exec -itn pod <NAME_SPACE> <POD_NAME> --bash `
+    ```
+  * To execute app inside the pod:
+    ```bash
+    `/app/bin/<APP_NAME> remote_console`
+    ```
+  * To execute module inside the app:
+    ```bash
+    `<MODULE_NAME>.<FUNCTION_NAME>`
+    ```
+  * To exit the app:
+    ```bash
+    `CTRL+C`
+    ```
+  * To exit the pod:
+    ```bash
+    `exit`
+    ```
   * To delete minikube:
     ```bash
     `minikube delete`
