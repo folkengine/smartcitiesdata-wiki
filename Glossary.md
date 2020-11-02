@@ -1,2 +1,2 @@
-# Coming Soon!
-[Elixir](https://elixir-lang.org/) is a functional, concurrent, general-purpose programming language that runs on the BEAM virtual machine used to implement the Erlang programming language.
+#[Elixir](https://elixir-lang.org/)
+A functional, concurrent, general-purpose programming language that runs on the BEAM virtual machine used to implement the Erlang programming language.
