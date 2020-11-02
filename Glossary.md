@@ -56,3 +56,4 @@ An in-memory data structure project implementing a distributed, in-memory key-va
 A tool for building, changing, and versioning infrastructure safely and efficiently. Terraform can manage existing and popular service providers as well as custom in-house solutions.
 
 # Travis
+A hosted continuous integration service used to build and test software projects hosted at GitHub and Bitbucket.
