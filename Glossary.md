@@ -64,6 +64,9 @@ React (also known as React.js or ReactJS) is an open-source, front-end JavaScrip
 # Redis (Remote Dictionary Server)
 An in-memory data structure project implementing a distributed, in-memory key-value database with optional durability.
 
+# Restful API
+Representational state transfer(REST) is a software architectural style that defines a set of constraints to be used for creating Web Services. Web services that conform to the REST architectural style, called RESTful Web services, provide interoperability between computer systems on the internet.
+
 # S3
 Amazon Simple Storage Service (Amazon S3)
 Storage for the internet. You can use it to store and retrieve any amount of data at any time, from anywhere on the web.
@@ -73,3 +76,6 @@ A tool for building, changing, and versioning infrastructure safely and efficien
 
 # Travis
 A hosted continuous integration service used to build and test software projects hosted at GitHub and Bitbucket.
+
+# WebSocket
+A computer communications protocol providing full-duplex communication channels over a single TCP connection.
