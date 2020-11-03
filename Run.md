@@ -15,6 +15,14 @@
     ```bash
     `helm repo add strimzi https://strimzi.io/charts`
     ```
+  * Add bitnami charts repository:
+    ```bash
+    `helm repo add bitnami https://charts.bitnami.com/bitnami`
+    ```
+  * Add hashicorp charts repository:
+    ```bash
+    `helm repo add hashicorp https://helm.releases.hashicorp.com`
+    ```
   * To search charts from all the repositories added locally:
     ```bash
     `helm search`
