@@ -1,3 +1,15 @@
+# To Run The Application from the root locally:
+  * Start docker by going inside the e2e app:
+    ```bash
+    `MIX_ENV=integration mix docker.start`
+    ```
+  * Start needed app by going inside each app as instructed in the README of each app, only skip the step in the README to start docker as it is already started in e2e.
+  * Kill the docker by going inside the e2e app:
+    ```bash
+    `MIX_ENV=integration mix docker.kill`
+    ```
+    ```
+
 # To Run The Application from the root locally in minikube:
   * Start minikube:
     ```bash
