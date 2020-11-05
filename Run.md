@@ -8,7 +8,6 @@
     ```bash
     `MIX_ENV=integration mix docker.kill`
     ```
-    ```
 
 # To Run The Application from the root locally in minikube:
   * Start minikube:
