@@ -33,11 +33,11 @@
     ```
   * To install chart and deploy application:
     ```bash
-    `helm upgrade --install <POD_NAME> <REPOSITORY_NAME>/<CHART_NAME>`
+    `helm upgrade --install <RELEASE> <REPOSITORY_NAME>/<CHART_NAME>`
     ```
     or
     ```bash
-    `helm upgrade --install <POD_NAME> <REPOSITORY_NAME>/<CHART_NAME> --namespace=<NAMESPACE>`
+    `helm upgrade --install <RELEASE> <REPOSITORY_NAME>/<CHART_NAME> --namespace=<NAMESPACE>`
     ```
     if you want to install it in a specific namespace. Uses default namespace if not specified.
   * To verify pods has been created succesfully:
