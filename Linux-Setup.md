@@ -35,7 +35,7 @@ Debian and Ubuntu Linux are unusually bifurcated in this process with different 
 
 Finally with Ubuntu, install the very similar dependencies `sudo apt-get install apt-transport-https ca-certificates curl gnupg-agent software-properties-common` and add Docker's GPG key, `curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`. Install the new apt source with `sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"`, update once more and finally install via `sudo apt-get install docker-ce docker-ce-cli containerd.io`
 
-On Ubuntu 18.04:
+On Ubuntu 16.04:
 `sudo apt install apt-transport-https ca-certificates curl software-properties-common`
 `curl -fsSl https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -`
 `sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic test"`
