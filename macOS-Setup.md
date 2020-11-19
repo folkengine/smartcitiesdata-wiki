@@ -1,7 +1,7 @@
 # asdf-vm
 asdf version manager is a great tool that will make it easy to manage multiple versions of dozens of languages and CLI tools. It's worth your time to set up. Best of all, it standardizes the version management interface across macOS and Linux.
 
-To install, clone the code directly from the project repository with the command `git clone https://github.com/asdf-vm/asdf.git ~/.asdf` and add the tool to your path by adding the following lines to your `.bash_profile` file: `source $HOME/.asdf/asdf.sh` and `source $HOME/.asdf/completions/asdf.bash`
+To install, clone the code directly from the project repository with the command `git clone https://github.com/asdf-vm/asdf.git ~/.asdf` and add the tool to your path by adding the following lines to your `.bash_profile` file: `source $HOME/.asdf/asdf.sh` and `source $HOME/.asdf/completions/asdf.bash`. Then restart your terminal.
 
 Once asdf is installed you can run `asdf plugin-add <name>` (elixir for instance) to install the language plugin, list all available versions of the language with `asdf list-all <name>`, install the desired version with `asdf install <name> <version>`, and once installed, set the global version of the language with `asdf global <name> <version>` or a project-specific version of the language by changing into the project directory and typing `asdf local <name> <version>`
 
