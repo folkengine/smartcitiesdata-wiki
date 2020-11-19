@@ -5,7 +5,7 @@ To install, clone the code directly from the project repository with the command
 
 Once asdf is installed you can run `asdf plugin-add <name>` (elixir for instance) to install the language plugin, list all available versions of the language with `asdf list-all <name>`, install the desired version with `asdf install <name> <version>`, and once installed, set the global version of the language with `asdf global <name> <version>` or a project-specific version of the language by changing into the project directory and typing `asdf local <name> <version>`
 
-Add the following dependencies to your system as well to ensure asdf behaves as expected. For Debian/Ubuntu-based systems run the command `sudo apt install automake autoconf libreadline-dev libncurses-dev libssl-dev libyaml-dev libxslt-dev libffi-dev libtool unixodbc-de unzip curl` and for Red Hat-based systems, the command `sudo dnf install automake autoconf readline-devel ncurses-devel openssl-devel libyaml-devel libxslt-devel libffi-devel libtool unixODBC-devel unzip curl` is your friend.
+Add the following dependencies to your system as well to ensure asdf behaves as expected. For Debian/Ubuntu-based systems run the command `sudo apt install automake autoconf libreadline-dev libncurses-dev libssl-dev libyaml-dev libxslt-dev libffi-dev libtool unixodbc-dev unzip curl` and for Red Hat-based systems, the command `sudo dnf install automake autoconf readline-devel ncurses-devel openssl-devel libyaml-devel libxslt-devel libffi-devel libtool unixODBC-devel unzip curl` is your friend.
 
 # Elixir
 For RHEL-flavored Linux, older versions can install Elixir and Erlang via the command `yum install elixir` while newer versions will want `dns install elixir`.
