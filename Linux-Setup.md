@@ -47,9 +47,6 @@ On Ubuntu 18.04:
 
 Docker Compose is much easier: for any of the supported distros, run the command `sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`. Make it executable and move it into your path.
 
-or on Ubuntu 18.04:
-`sudo apt install docker-compose`
-
 # Kubectl
 In order to interact with the deployed platform, either in a local scenario or production deployment, you'll need the Kubernetes command line tool. There are native packages available, but for a simple compiled Go binary, why go to all that trouble? Simply run the command `curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl` to pull the latest stable release direct from Google storage servers. Make it executable and move it into the preferred directory in your path.
 
