@@ -1,4 +1,4 @@
-![scdp architecture diagram](https://github.com/smartcitiesdata/smartcitiesdata/blob/master/scdp_arch.png?raw=true "scdp architecture")
+![scdp architecture diagram](https://github.com/Datastillery/smartcitiesdata/blob/master/scdp_arch.png?raw=true "scdp architecture")
 
 The platform architecture is intended to be cloud native _and_ cloud agnostic. Standards are heavily favored in the design of components and features to ensure that anyone who adopts the system has flexibility in choosing their preferred vendor without fear of lock-in due to incompatibilities elsewhere. Any major public cloud provider or private cloud technology can leverage the technologies on which the Smart Cities Data project is built.
 
@@ -34,7 +34,7 @@ The administration application is a web application built in Elixir's Phoenix we
 
 New datasets and organizations posted to the administrative interface fire off the creation of events in the central event stream for other components of the system to perform ingestion and user display tasks.
 
-See the [repo](https://github.com/smartcitiesdata/andi) or [andi](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Names#andi) in the application names section for an explanation.
+See the [repo](https://github.com/smartcitiesdata/andi) or [andi](https://github.com/Datastillery/smartcitiesdata/wiki/Names#andi) in the application names section for an explanation.
 
 ## Gather and Ingest
 Once a dataset has been defined by the administrative interface, it must be gathered and parsed onto a message queue. The [Reaper](https://github.com/smartcitiesdata/reaper) application reads the cadence by which data is to be retrieved from a given dataset, as well as the format and transfer protocol to expect the data over and then downloads the data or reads it from the remote source on that scheduled cadence.
