@@ -16,7 +16,7 @@ Discovery UI should be wrapped in some kind of branding. As an example, Columbus
 ## [Divo](https://github.com/Datastillery/divo)
 An acronym standing for "Docker Integration and Validation Orchestrator"; Divo is a library for providing integration testing functionality of Elixir applications via the Docker and Docker-Compose tools and orchestrating them natively within the Elixir Mix tool.
 
-## [Flair](https://github.com/Datastillery/smartcitiesdata/tree/master/apps/flair)
+## Flair (deprecated)
 Flair is a microservice that analyzes dataset ingestion operations and statistically profiles them before writing the results to a metadata table within the platform storage backend. It is named for the WWE star Ric Flair because it "styles and profiles" the data.
 
 ## [Forklift](https://github.com/Datastillery/smartcitiesdata/tree/master/apps/forklift)
@@ -49,13 +49,13 @@ A library developed specifically for standardizing the testing process of the va
 ## [Streaming Metrics](https://github.com/Datastillery/streaming_metrics)
 A library developed to facilitate the gathering of internal data points for health and performance monitoring of various platform components, standardized across the Kubernetes containerized workloads and the cloud provider's infrastructure. Not especially esoteric but it does carry the "streaming" name from the period of the platform's evolution when streaming data processing was still disconnected from legacy handling of static datasets.
 
-## [Streisand](https://github.com/Datastillery/streisand)
+## Streisand (deprecated)
 Streisand is a microservice that reads messages specifically from streaming datasets off the end of the ingestion pipeline (just prior to their being uploaded to the storage backend) and sends them to be streamed back out of the system via web socket. Because it "publicizes" data, it is ironically named for the [Streisand Effect](https://en.wikipedia.org/wiki/Streisand_effect), or the tendency for information on the Internet desired to be hidden or removed to be more actively shared and publicized as a result of attempted obfuscation.
 
 ## [Valkyrie](https://github.com/Datastillery/smartcitiesdata/tree/master/apps/valkyrie)
 Valkyrie is a microservice that processes data messages and validates or normalizes them according to the schema that was supplied as part of their dataset's definition. Messages that are too distorted from their expected format are discarded. The service was named for the Norse mythological female warriors who judged the dead for worthiness to be accepted into the glorious afterlife of warriors, Valhalla.
 
-## [Voltron](https://github.com/Datastillery/voltron)
+## Voltron (deprecated)
 Voltron is a microservice used to apply arbitrary transformations against dataset messages based on a list of transformation functions supplied with the dataset definition for those messages. Like the eponymous mecha from the classic Japanese cartoon of the same name, it is an aggregation of "transformers".
 
 ## Yeet (deprecated)
