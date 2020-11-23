@@ -3,13 +3,13 @@ Like any good software project, the Smart Cities Data platform is built on a hea
 
 What follows is an explanation of the library and microservice names that make up the project.
 
-## [Andi](https://github.com/smartcitiesdata/smartcitiesdata/tree/master/apps/andi)
+## [Andi](https://github.com/Datastillery/smartcitiesdata/tree/master/apps/andi)
 Andi is the microservice providing a RESTful API for administrative management of the data and organizations stored within the platform. Andi is an acronym, standing for "Administrative New Data Interface" and was chosen because of the original project's user persona developed for a theoretical system administrator, named Andy.
 
 ## Carpenter (deprecated)
 Carpenter is a microservice that creates tables in the database.  _*rimshot*_
 
-## Discovery [API](https://github.com/smartcitiesdata/discovery_api)/[Streams](https://github.com/smartcitiesdata/discovery_streams)/[UI](https://github.com/smartcitiesdata/react_discovery_ui)
+## Discovery [API](https://github.com/Datastillery/smartcitiesdata/tree/master/apps/discovery_api)/[Streams](https://github.com/Datastillery/smartcitiesdata/tree/master/apps/discovery_streams)/[UI](https://github.com/smartcitiesdata/react_discovery_ui)
 The three complementary microservices providing end users with access to interact with the data in the platform. They allow programmatic access via a RESTful API, provide persistent web sockets for streaming data, and a React-based graphical web interface respectively, allowing users to discover the data and insights from it (this one's pretty straightforward).
 Discovery UI should be wrapped in some kind of branding. As an example, Columbus uses [this repo](https://github.com/SmartColumbusOS/discovery_ui) as its brand wrapper
 
@@ -28,13 +28,13 @@ Genesis is the "creator" of Kafka topics for publicizing streaming datasets to a
 ## [KDP](https://github.com/smartcitiesdata/kdp)
 A Kubernetes deployment of the microservices and software components that make up the platform's storage backend (PrestoDB coordinator and workers, Hive Metastore, PostgreSQL database, and Minio S3 object store). It is an acronym standing for _Kubernetes Data Platform_ and was named in response to the _Hortonworks Data Platform_ it replaced on the project when the team pivoted to a more cloud native implementation of a big data storage engine.
 
-## [Odo](https://github.com/smartcitiesdata/odo)
+## [Odo](https://github.com/Datastillery/smartcitiesdata/tree/master/apps/odo)
 Odo is a microservice that converts shapefiles (a common geospatial data format) into geojson (another common geospatial data format, but easier to work with). Because the service changes the shape of files, it is named for the shapeshifting alien of the same name from the television series Star Trek: Deep Space 9
 
 ## [Prestige](https://github.com/smartcitiesdata/prestige)
 A library providing an Elixir driver for the PrestoDB SQL engine. It is named for the word's similarity to the Presto name and for the 206 movie of the same name staring Hugh Jackman and Christian Bale (itself a novel by Christopher Priest and a reference to the "third act of every magic trick")
 
-## [Reaper](https://github.com/smartcitiesdata/reaper)
+## [Reaper](https://github.com/Datastillery/smartcitiesdata/tree/master/apps/reaper)
 Reaper is the microservice that sits at the outer edge of the platform and retrieves data from various sources and formats, initially downloading it and writing it into the ingestion pipeline. It is named for the farming and harvesting term meaning "to gather" the data for consumption.
 
 ## [Smart City](https://github.com/smartcitiesdata/smart_city)
@@ -52,7 +52,7 @@ A library developed to facilitate the gathering of internal data points for heal
 ## [Streisand](https://github.com/smartcitiesdata/streisand)
 Streisand is a microservice that reads messages specifically from streaming datasets off the end of the ingestion pipeline (just prior to their being uploaded to the storage backend) and sends them to be streamed back out of the system via web socket. Because it "publicizes" data, it is ironically named for the [Streisand Effect](https://en.wikipedia.org/wiki/Streisand_effect), or the tendency for information on the Internet desired to be hidden or removed to be more actively shared and publicized as a result of attempted obfuscation.
 
-## [Valkyrie](https://github.com/smartcitiesdata/valkyrie)
+## [Valkyrie](https://github.com/Datastillery/smartcitiesdata/tree/master/apps/valkyrie)
 Valkyrie is a microservice that processes data messages and validates or normalizes them according to the schema that was supplied as part of their dataset's definition. Messages that are too distorted from their expected format are discarded. The service was named for the Norse mythological female warriors who judged the dead for worthiness to be accepted into the glorious afterlife of warriors, Valhalla.
 
 ## [Voltron](https://github.com/smartcitiesdata/voltron)
