@@ -48,11 +48,6 @@ Data that has been read into the system in its raw form must then be validated a
 
 The [valkyrie name](https://github.com/Datastillery/smartcitiesdata/wiki/Names#valkyrie) explained.
 
-## Custom Transformations
-When individual datasets need custom transformations applied to them, [Voltron](https://github.com/Datastillery/voltron) applies these transformations by reading a list of transformation functions off the dataset definition and then applying them in order against each message of the dataset coming across the message queue. These transformations can be internally pre-defined or indicate external lambda-style functions provided as a service. Transformed messages are once again written to a queue dedicated to their specific dataset after appending basic performance (timing) metrics from the transformation operations performed.
-
-The [voltron name](https://github.com/Datastillery/smartcitiesdata/wiki/Names#voltron) explained.
-
 ## Persist
 Messages finished with the ingestion, validation, and transformation process are then persisted to the S3-backed Presto datastore by [Forklift](https://github.com/Datastillery/smartcitiesdata/tree/master/apps/forklift) via SQL insertions of batched records.
 
@@ -64,11 +59,6 @@ The [forklift name](https://github.com/Datastillery/smartcitiesdata/wiki/Names#f
 While all records are inserted into the data store, streaming records are also re-published to a web socket for external consumers to take advantage of the real time updates to the data once they've been sanitized or transformed by the platform. This is done by another Elixir Phoenix web application, [Discovery Streams](https://github.com/Datastillery/smartcitiesdata/tree/master/apps/discovery_streams), taking advantage of Phoenix's native first-class support for web sockets. The data messages are read off the same queue Forklift draws from and pushes them to a dedicated web socket.
 
 The [discovery application names](https://github.com/Datastillery/smartcitiesdata/wiki/Names#discovery-apistreamsui) explained.
-
-## Profile
-The overall platform itself generates valuable insights about the data it processes just in the course of that processing and this is calculated by [Flair](https://github.com/Datastillery/smartcitiesdata/tree/master/apps/flair) based on timestamps and other observations of the data inserted periodically throughout the pipeline.
-
-Flair performs regular inserts of the resulting data into metadata tables also stored in S3 via the PrestoDB engine.
 
 The [flair name](https://github.com/Datastillery/smartcitiesdata/wiki/Names#flair) explained.
 
