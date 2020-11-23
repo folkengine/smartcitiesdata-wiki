@@ -78,7 +78,7 @@ The primary interface for searching and connecting the data is the [Discovery AP
 The [discovery api name](https://github.com/Datastillery/smartcitiesdata/wiki/Names#discovery-apistreamsui) is covered with the other related components.
 
 ## User Interface
-The visual overlay to the REST api the user interacts with. [Discovery UI](https://github.com/smartcitiesdata/discovery_ui) is a React Javascript application and built to be responsive and modular, making heavy use of the React components model for structuring apps. The entirety of the Smart Cities Data platform customized user interface is made up of composable components and integrates common visualization libraries for working with the data returned by the API directly in the user's browser window.
+The visual overlay to the REST api the user interacts with. [Discovery UI](https://github.com/Datastillery/react_discovery_ui) is a React Javascript application and built to be responsive and modular, making heavy use of the React components model for structuring apps. The entirety of the Smart Cities Data platform customized user interface is made up of composable components and integrates common visualization libraries for working with the data returned by the API directly in the user's browser window.
 
 The [discovery ui name](https://github.com/Datastillery/smartcitiesdata/wiki/Names#discovery-apistreamsui) is likewise explained with its related components.
 
