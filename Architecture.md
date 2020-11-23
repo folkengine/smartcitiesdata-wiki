@@ -34,17 +34,17 @@ The administration application is a web application built in Elixir's Phoenix we
 
 New datasets and organizations posted to the administrative interface fire off the creation of events in the central event stream for other components of the system to perform ingestion and user display tasks.
 
-See the [repo](https://github.com/smartcitiesdata/andi) or [andi](https://github.com/Datastillery/smartcitiesdata/wiki/Names#andi) in the application names section for an explanation.
+See the [repo](https://github.com/Datastillery/smartcitiesdata/tree/master/apps/andi) or [andi](https://github.com/Datastillery/smartcitiesdata/wiki/Names#andi) in the application names section for an explanation.
 
 ## Gather and Ingest
-Once a dataset has been defined by the administrative interface, it must be gathered and parsed onto a message queue. The [Reaper](https://github.com/smartcitiesdata/reaper) application reads the cadence by which data is to be retrieved from a given dataset, as well as the format and transfer protocol to expect the data over and then downloads the data or reads it from the remote source on that scheduled cadence.
+Once a dataset has been defined by the administrative interface, it must be gathered and parsed onto a message queue. The [Reaper](https://github.com/Datastillery/smartcitiesdata/tree/master/apps/reaper) application reads the cadence by which data is to be retrieved from a given dataset, as well as the format and transfer protocol to expect the data over and then downloads the data or reads it from the remote source on that scheduled cadence.
 
 At the appointed interval, Reaper broadcasts an event into the event stream that an ingestion is starting for a given dataset and writes the data, one record per message, to a dedicated message queue. Once all data for that interval has been consumed, another event is broadcast to signal ingestion has completed.
 
 See [reaper name](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Names#reaper) explained.
 
 ## Normalize and Validate
-Data that has been read into the system in its raw form must then be validated against the expected schema defined in its definition record and any data that deviates from that schema must be normalized or discarded. The [Valkyrie](https://github.com/smartcitiesdata/valkyrie) component sits behind the ingestion component and performs these tasks. If a given message contains data that does not match the form indicated in the definition schema, but that data can be reasonably coerced to the proper form (a `"1"` (string) was written when the schema indicated a `1` (integer) was expected), Valkyrie takes care of this before passing the message onto another dedicated message queue.
+Data that has been read into the system in its raw form must then be validated against the expected schema defined in its definition record and any data that deviates from that schema must be normalized or discarded. The [Valkyrie](https://github.com/Datastillery/smartcitiesdata/tree/master/apps/valkyrie) component sits behind the ingestion component and performs these tasks. If a given message contains data that does not match the form indicated in the definition schema, but that data can be reasonably coerced to the proper form (a `"1"` (string) was written when the schema indicated a `1` (integer) was expected), Valkyrie takes care of this before passing the message onto another dedicated message queue.
 
 The [valkyrie name](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Names#valkyrie) explained.
 
@@ -61,19 +61,19 @@ Forklift gathers messages into 1 MB chunks and then inserts them into Presto, pe
 The [forklift name](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Names#forklift) explained.
 
 ## Socket API
-While all records are inserted into the data store, streaming records are also re-published to a web socket for external consumers to take advantage of the real time updates to the data once they've been sanitized or transformed by the platform. This is done by another Elixir Phoenix web application, [Discovery Streams](https://github.com/smartcitiesdata/discovery_streams), taking advantage of Phoenix's native first-class support for web sockets. The data messages are read off the same queue Forklift draws from and pushes them to a dedicated web socket.
+While all records are inserted into the data store, streaming records are also re-published to a web socket for external consumers to take advantage of the real time updates to the data once they've been sanitized or transformed by the platform. This is done by another Elixir Phoenix web application, [Discovery Streams](https://github.com/Datastillery/smartcitiesdata/tree/master/apps/discovery_streams), taking advantage of Phoenix's native first-class support for web sockets. The data messages are read off the same queue Forklift draws from and pushes them to a dedicated web socket.
 
 The [discovery application names](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Names#discovery-apistreamsui) explained.
 
 ## Profile
-The overall platform itself generates valuable insights about the data it processes just in the course of that processing and this is calculated by [Flair](https://github.com/smartcitiesdata/flair) based on timestamps and other observations of the data inserted periodically throughout the pipeline.
+The overall platform itself generates valuable insights about the data it processes just in the course of that processing and this is calculated by [Flair](https://github.com/Datastillery/smartcitiesdata/tree/master/apps/flair) based on timestamps and other observations of the data inserted periodically throughout the pipeline.
 
 Flair performs regular inserts of the resulting data into metadata tables also stored in S3 via the PrestoDB engine.
 
 The [flair name](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Names#flair) explained.
 
 ## REST API
-The primary interface for searching and connecting the data is the [Discovery API](https://github.com/smartcitiesdata/discovery_api) component that provides the backbone for the user web interface. Another Elixir Phoenix web application, it handles the streaming the download of datasets to the user's browser, querying, and routing user requests as well as an authentication and authorization gate for preventing public access to datasets within the system that are restricted to members of the owning organization or other privileged users.
+The primary interface for searching and connecting the data is the [Discovery API](https://github.com/Datastillery/smartcitiesdata/tree/master/apps/discovery_api) component that provides the backbone for the user web interface. Another Elixir Phoenix web application, it handles the streaming the download of datasets to the user's browser, querying, and routing user requests as well as an authentication and authorization gate for preventing public access to datasets within the system that are restricted to members of the owning organization or other privileged users.
 
 The [discovery api name](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Names#discovery-apistreamsui) is covered with the other related components.
 
@@ -85,7 +85,7 @@ The [discovery ui name](https://github.com/smartcitiesdata/smartcitiesdata/wiki/
 ## Extensibility Switchboard
 With the data flowing through the system in dedicated queue lanes, available from streaming web sockets and RESTful APIs, not to mention the full scope of the systems internals like the S3 object store, SQL engine, key value stores, and Kubernetes components, the concept of the Extensibility Switchboard is really meant to leave space for anyone to add additional components to the system and interact with the data where and how it makes the most sense.
 
-One such component is the [Odo](https://github.com/smartcitiesdata/odo) application ([name](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Names#odo) explained)which listens to the event stream for notice of Shapefile geospatial data files being loaded into the S3 backend directly (files not in a format that can be broken into discreet messages and loaded into Presto) and immediately converts them to the more flexible GeoJson format that _can_ be loaded as well as queried. Because it acts on event stream notices and interacts directly with the S3 store it sits outside the ETL pipeline.
+One such component is the [Odo](https://github.com/Datastillery/smartcitiesdata/tree/master/apps/odo) application ([name](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Names#odo) explained)which listens to the event stream for notice of Shapefile geospatial data files being loaded into the S3 backend directly (files not in a format that can be broken into discreet messages and loaded into Presto) and immediately converts them to the more flexible GeoJson format that _can_ be loaded as well as queried. Because it acts on event stream notices and interacts directly with the S3 store it sits outside the ETL pipeline.
 
 The sky is really the limit and you can add as many components as your Kubernetes cluster can handle in whatever language you like so long as it can consume event notification messages from Kafka. You may insert another stage into the pipeline to scrub PCI data from your incoming records, or listen for updates to very specific datasets and re-process their raw records based on some algorithm before re-inserting the results into their own table (much as Spark is used in a Hadoop cluster).
 
