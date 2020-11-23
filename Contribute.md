@@ -1,5 +1,5 @@
 # Where to begin
-The best place to start is to familiarize yourself with the platform architecture and how it all fits together. Start with the [walkthrough](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Architecture) in this wiki and spend as much time as you feel is necessary to get comfortable with what's going on.
+The best place to start is to familiarize yourself with the platform architecture and how it all fits together. Start with the [walkthrough](https://github.com/Datastillery/smartcitiesdata/wiki/Architecture) in this wiki and spend as much time as you feel is necessary to get comfortable with what's going on.
 
 When in doubt, [ask questions](https://gitter.im/smartcitiesdata/community).
 
@@ -40,7 +40,7 @@ When all tests have passed, all discussions have been resolved and your pull req
 The merging team member will add a comment to the pull request or reach out directly to let you know about when you can expect your contribution to be included in the next release of that platform component.
 
 # Code of Conduct
-As with all good open source projects, Smart Cities Data has a Code of Conduct for the community by which all members are expected to abide. It is [documented here](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Code-of-Conduct).
+As with all good open source projects, Smart Cities Data has a Code of Conduct for the community by which all members are expected to abide. It is [documented here](https://github.com/Datastillery/smartcitiesdata/wiki/Code-of-Conduct).
 
 # Contributor License Agreement
-To ensure that adopters of the project can have confidence in the ongoing open nature of all Smart Cities Data projects, we ask contributors to agree to our [Contributor License Agreement](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Contributor-License).
+To ensure that adopters of the project can have confidence in the ongoing open nature of all Smart Cities Data projects, we ask contributors to agree to our [Contributor License Agreement](https://github.com/Datastillery/smartcitiesdata/wiki/Contributor-License).
