@@ -10,6 +10,6 @@ While you may not need all of the following, end-to-end development of the platf
 * __Minikube__ - Local development testing
 
 For instructions to setup your platform of choice, read on:
-* [macOS](https://github.com/smartcitiesdata/smartcitiesdata/wiki/macOS-Setup)
-* [Linux](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Linux-Setup)
-* [Windows](https://github.com/smartcitiesdata/smartcitiesdata/wiki/Windows-Setup)
+* [macOS](https://github.com/Datastillery/smartcitiesdata/wiki/macOS-Setup)
+* [Linux](https://github.com/Datastillery/smartcitiesdata/wiki/Linux-Setup)
+* [Windows](https://github.com/Datastillery/smartcitiesdata/wiki/Windows-Setup)
