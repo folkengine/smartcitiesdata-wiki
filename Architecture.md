@@ -60,8 +60,6 @@ While all records are inserted into the data store, streaming records are also r
 
 The [discovery application names](https://github.com/Datastillery/smartcitiesdata/wiki/Names#discovery-apistreamsui) explained.
 
-The [flair name](https://github.com/Datastillery/smartcitiesdata/wiki/Names#flair) explained.
-
 ## REST API
 The primary interface for searching and connecting the data is the [Discovery API](https://github.com/Datastillery/smartcitiesdata/tree/master/apps/discovery_api) component that provides the backbone for the user web interface. Another Elixir Phoenix web application, it handles the streaming the download of datasets to the user's browser, querying, and routing user requests as well as an authentication and authorization gate for preventing public access to datasets within the system that are restricted to members of the owning organization or other privileged users.
 
