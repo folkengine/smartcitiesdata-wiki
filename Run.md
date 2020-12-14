@@ -33,7 +33,7 @@
       MIX_ENV=integration iex -S mix
       ```
     * Open a new tab in your terminal and go inside the apps/discovery_api directory and
-      1. Since another app is using port 4000 you will need to change the port on line 17 of apps/discovery_api/config/config.exs to 4001   
+      1. Change the port on line 17 of apps/discovery_api/config/config.exs to 4001 since another app is using port 4000
       2. Then run
       ```bash
       MIX_ENV=integration iex -S mix start
@@ -128,8 +128,17 @@
       * Click 'Publish'
     * This will publish our Dataset. Reaper will gather it, Valkyrie will normalize it and Forklift will persist it.
     * Now if you go to http://localhost:9001/ you should see one dataset called 2019 COTA Stop Ridership Ranking with File Type: CSV.
-    * Forklift created two tables in the presto database: city_of_columbus__2019_cota_stop_ridership_ranking and city_of_columbus__2019_cota_stop_ridership_ranking__json. city_of_columbus__2019_cota_stop_ridership_ranking__json has the uncompacted data from the csv file. Before we can query the dataset in discovery_ui we will need to run compaction. We will do it manually, but it is also possible to create a job to do it.
-    *
+    * If you click on the link you should see the details of the dataset that should look like the dataset we [copied](https://discovery.smartcolumbusos.com/dataset/central_ohio_transit_authority/2019_cota_stop_ridership_ranking).
+    * However, if you click on 'Write SQL' you will not see any records.
+    * Forklift created two tables in the presto database(docker micro service): city_of_columbus__2019_cota_stop_ridership_ranking and city_of_columbus__2019_cota_stop_ridership_ranking__json. city_of_columbus__2019_cota_stop_ridership_ranking__json has the uncompacted data from the csv file and city_of_columbus__2019_cota_stop_ridership_ranking doesn't have any records. Before we can query the dataset in discovery_ui we will need to run compaction. We will do it manually, but it is also possible to create a job to do it.
+    * ON the tab running Forklift run
+      ```Forklift.DataWriter.compact_dataset(Forklift.Datasets.get!(<dataset_id>))```
+      You can find the <dataset_id> in the url of the address bar of andi when you click on the dataset. The url should be https://127.0.0.1.xip.io:4443/datasets/<dataset_id>.
+    * This will run compaction and now city_of_columbus__2019_cota_stop_ridership_ranking will have the ingested data and city_of_columbus__2019_cota_stop_ridership_ranking__json will be empty.
+    * Now if you click on 'Write SQL' you will see the records.
+    * If you want you can click 'Visualize' and create a visualization.
+    * If you want to save your work you can click the save button.
+    * If you want to see your saved visualizations you can click on the folder.
   * When you're done you can kill the docker micro services inside the e2e directory by running:
     ```bash
     MIX_ENV=integration mix docker.kill
