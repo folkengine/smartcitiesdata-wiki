@@ -66,7 +66,7 @@
       * For Description type 'City of Columbus'
       * For Data JSON URL type 'https://opendata.columbus.gov/data.json'
       * Click 'Save'
-     * Once you're done creating an organization you can create a dataset for that organization On the datasets page click 'ADD DATASET'
+    * Once you're done creating an organization you can create a dataset for that organization On the datasets page click 'ADD DATASET'
       * Type '2019 COTA Stop Ridership Ranking' For Dataset Title
       * Pick '09/14/2020' for Last Updated
       * Data Name should be '2019_cota_stop_ridership_ranking'
