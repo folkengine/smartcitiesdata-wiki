@@ -89,6 +89,28 @@
       * Pick 'Low' for Risk
       * Click 'Save Draft'
       * Click 'Next'
+      * You should be on the Data Dictionary.
+      * Click the plus icon and type 'Year' for name, pick 'Integer' for type and pick 'TopLevel' for Child Of.
+      * Click 'ADD FIELD'
+      * Type a Description, for inspiration look at the Data Dictionary [for the dataset we're trying to replicate locally](https://discovery.smartcolumbusos.com/dataset/central_ohio_transit_authority/2019_cota_stop_ridership_ranking)
+      * Pick 'None' for P.I.I
+      * Pick 'N/A' for De-Identified
+      * Pick 'None' for Demographic Traits
+      * Pick 'No' for Potentially Biased
+      * Repeat the last 7 steps 12 more times, but with
+        * 'Month' for name and 'String' for type
+        * 'DAY_OF_WEEK' for name and 'String' for type
+        * 'UNIQUE_STOP_NUMBER' for name and 'Integer' for type
+        * 'STOP_NAME' for name and 'String' for type
+        * 'ON' for name and 'Integer' for type
+        * 'OFF' for name and 'Integer' for type
+        * 'TOTAL' for name and 'Integer' for type
+        * 'LAT' for name and 'Float' for type
+        * 'LONG' for name and 'Float' for type
+        * 'TRIP_AVG_DWELL' for name and 'Float' for type
+        * 'DAY_AVG_DWELL' for name and 'Float' for type
+        * 'RANK' for name and 'Integer' for type
+      
   * When you're done you can kill the docker micro services inside the e2e directory by running:
     ```bash
     MIX_ENV=integration mix docker.kill
