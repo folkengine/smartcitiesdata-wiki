@@ -139,6 +139,11 @@
     * If you want you can click 'Visualize' and create a visualization.
     * If you want to save your work you can click the save button.
     * If you want to see your saved visualizations you can click on the folder.
+  * To trouble shoot:
+    * Check to see if the dataset is in presto:
+      * TODO
+    * Check the kafka topics:
+      * TODO
   * When you're done you can kill the docker micro services inside the e2e directory by running:
     ```bash
     MIX_ENV=integration mix docker.kill
