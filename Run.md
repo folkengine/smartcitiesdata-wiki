@@ -1,4 +1,4 @@
-# To Run The Application from the root locally:
+# To Run The Application from the root locally (detailed):
   Note: These instructions were written followed on a Mac with smartcitiesdata(e2e:0.1.0, andi:0.64.3, reaper:0.24.9, discovery_api:0.51.4, valkyrie:1.6.5, forklift:0.17.9) and discovery_ui:1.0.0
   * Start the docker micro services needed for all apps in [smartcitiesdata](https://github.com/Datastillery/smartcitiesdata) by going inside the apps/e2e directory in your terminal and run:
     ```bash
@@ -144,7 +144,7 @@
     MIX_ENV=integration mix docker.kill
     ```
 
-# To Run The Application from the root locally in minikube:
+# To Run The Application from the root locally in minikube (high level):
   * Start minikube:
     ```bash
     minikube start --kubernetes-version v1.15.0 --memory 6144 --cpus 4
