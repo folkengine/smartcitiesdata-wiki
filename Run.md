@@ -67,12 +67,28 @@
       * For Data JSON URL type 'https://opendata.columbus.gov/data.json'
       * Click 'Save'
      * Once you're done creating an organization you can create a dataset for that organization On the datasets page click 'ADD DATASET'
-      * For Dataset Title type '2019 COTA Stop Ridership Ranking'
-      * For Last Updated pick '09/14/2020'
+      * Type '2019 COTA Stop Ridership Ranking' For Dataset Title
+      * Pick '09/14/2020' for Last Updated
       * Data Name should be '2019_cota_stop_ridership_ranking'
       * Type 'Central Ohio' for Spatial Boundaries
       * Type 'This dataset presents 2019 stop ridership rankings.' for Description
-      * type '2019' for 'Tem 
+      * Type '2019' for Temporal Boundaries
+      * Pick 'CSV' for Source Format
+      * Pick 'Ingest' for Source Type
+      * Pick 'City of Columbus' for Organization Title
+      * Type 'Andrew Merrill' for Maintainer Name
+      * Pick 'Public' for Level of Access
+      * Type 'merrillaj@cota.com' for Maintainer Email
+      * Pick your login email for Dataset Owner
+      * Pick '09/14/2020' for the Release Date
+      * Type 'https://www.cota.com/' for Homepage URL
+      * Type 'irregular' for Update Frequency
+      * Type 'https://creativecommons.org/licenses/by/4.0/' for License
+      * Type 'COTA, ridership, transit, onboarding, stop, 2019' for Keywords
+      * Pick 'Medium' for Benefit
+      * Pick 'Low' for Risk
+      * Click 'Save Draft'
+      * Click 'Next'
   * When you're done you can kill the docker micro services inside the e2e directory by running:
     ```bash
     MIX_ENV=integration mix docker.kill
