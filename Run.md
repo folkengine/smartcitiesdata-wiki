@@ -32,7 +32,9 @@
       ```bash
       MIX_ENV=integration iex -S mix
       ```
-    * Open a new tab in your terminal and go inside the apps/discovery_api directory and run
+    * Open a new tab in your terminal and go inside the apps/discovery_api directory and
+      1. Since another app is using port 4000 you will need to change the port on line 17 of apps/discovery_api/config/config.exs to 4001   
+      2. Then run
       ```bash
       MIX_ENV=integration iex -S mix start
       ```
@@ -124,6 +126,10 @@
       * Click 'Immediately'
       * Click 'Save Draft'
       * Click 'Publish'
+    * This will publish our Dataset. Reaper will gather it, Valkyrie will normalize it and Forklift will persist it.
+    * Now if you go to http://localhost:9001/ you should see one dataset called 2019 COTA Stop Ridership Ranking with File Type: CSV.
+    * Forklift created two tables in the presto database: city_of_columbus__2019_cota_stop_ridership_ranking and city_of_columbus__2019_cota_stop_ridership_ranking__json. city_of_columbus__2019_cota_stop_ridership_ranking__json has the uncompacted data from the csv file. Before we can query the dataset in discovery_ui we will need to run compaction. We will do it manually, but it is also possible to create a job to do it.
+    *
   * When you're done you can kill the docker micro services inside the e2e directory by running:
     ```bash
     MIX_ENV=integration mix docker.kill
