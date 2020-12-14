@@ -110,7 +110,20 @@
         * 'TRIP_AVG_DWELL' for name and 'Float' for type
         * 'DAY_AVG_DWELL' for name and 'Float' for type
         * 'RANK' for name and 'Integer' for type
-      
+      * Click 'Save Draft'
+      * Click 'Next'
+      * You should be on Configure Ingest Steps.
+      * Pick 'HTTP'
+      * Click 'Add Step'
+      * Pick 'GET' for Method
+      * Pick 'https://scos-source-datasets.s3-us-west-2.amazonaws.com/2019_Jan_Dec+SRR.csv' for URL. This is where the data will come from! The Data Dictionary created earlier was based on the format of this csv file!
+      * Click 'Test'. You should receive a success.
+      * Click 'Save Draft'
+      * Click 'Next'
+      * You should be on Finalize.
+      * Click 'Immediately'
+      * Click 'Save Draft'
+      * Click 'Publish'
   * When you're done you can kill the docker micro services inside the e2e directory by running:
     ```bash
     MIX_ENV=integration mix docker.kill
