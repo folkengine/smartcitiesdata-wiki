@@ -57,10 +57,22 @@
       to actually start discovery_ui
   * Now that everything is up to see the operating system in action:
     
-    * Open a browser and visit andi by going to https://127.0.0.1.xip.io:4443/datasets. If it is your first time you won't see any datasets.
+    * Open a browser and visit andi by going to https://127.0.0.1.xip.io:4443/datasets. If it is your first time you will need to login as a data curator (create a user in Auth0) and you won't see any datasets.
     * Before you can create a dataset you need to create an organization:
-      * click Add Organization
-      * 
+      * click 'ADD ORGANIZATION'
+      * For Organization Title type 'City of Columbus'
+      * For Logo URL type 'https://s3-us-west-2.amazonaws.com/prod-os-public-data/org-logos/city_of_columbus.png'
+      * Organization Name should say 'city_of_columbus'
+      * For Description type 'City of Columbus'
+      * For Data JSON URL type 'https://opendata.columbus.gov/data.json'
+      * Click 'Save'
+     * Once you're done creating an organization you can create a dataset for that organization On the datasets page click 'ADD DATASET'
+      * For Dataset Title type '2019 COTA Stop Ridership Ranking'
+      * For Last Updated pick '09/14/2020'
+      * Data Name should be '2019_cota_stop_ridership_ranking'
+      * Type 'Central Ohio' for Spatial Boundaries
+      * Type 'This dataset presents 2019 stop ridership rankings.' for Description
+      * type '2019' for 'Tem 
   * When you're done you can kill the docker micro services inside the e2e directory by running:
     ```bash
     MIX_ENV=integration mix docker.kill
