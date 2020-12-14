@@ -55,6 +55,12 @@
       npm run start
       ```
       to actually start discovery_ui
+  * Now that everything is up to see the operating system in action:
+    
+    * Open a browser and visit andi by going to https://127.0.0.1.xip.io:4443/datasets. If it is your first time you won't see any datasets.
+    * Before you can create a dataset you need to create an organization:
+      * click Add Organization
+      * 
   * When you're done you can kill the docker micro services inside the e2e directory by running:
     ```bash
     MIX_ENV=integration mix docker.kill
