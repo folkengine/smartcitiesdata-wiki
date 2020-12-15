@@ -148,8 +148,8 @@
     * However, if you click on 'Write SQL' you will not see any records.
     * Forklift created two tables in the presto database(one of the docker micro services): city_of_columbus__2019_cota_stop_ridership_ranking and city_of_columbus__2019_cota_stop_ridership_ranking__json. city_of_columbus__2019_cota_stop_ridership_ranking__json has the uncompacted data from the csv file and city_of_columbus__2019_cota_stop_ridership_ranking doesn't have any records. Before we can query the dataset in discovery_ui we will need to run compaction. We will do it manually, but it is also possible to create a job to do it.
     * ON the tab running Forklift hit enter to see the interactive shell then run
-      ```Forklift.DataWriter.compact_dataset(Forklift.Datasets.get!(<dataset_id>))```
-      You can find the <dataset_id> in the url of the address bar of andi when you click on the dataset. The url should be https://127.0.0.1.xip.io:4443/datasets/<dataset_id>.
+      ```Forklift.DataWriter.compact_dataset(Forklift.Datasets.get!("<dataset_id>"))```
+      You can find the <dataset_id> in the url of the address bar of andi when you click on the dataset. The url should be https://127.0.0.1.xip.io:4443/datasets/<dataset_id>. So if the url is "https://127.0.0.1.xip.io:4443/datasets/4280e4e0-1cb5-4318-a4b1-72deaaeeca3e" run ```Forklift.DataWriter.compact_dataset(Forklift.Datasets.get!("4280e4e0-1cb5-4318-a4b1-72deaaeeca3e"))```
     * This will run compaction and now city_of_columbus__2019_cota_stop_ridership_ranking will have the ingested data and city_of_columbus__2019_cota_stop_ridership_ranking__json will be empty.
     * Now if you click on 'Write SQL' you will see the records.
     * If you want you can click 'Visualize' and create a visualization.
