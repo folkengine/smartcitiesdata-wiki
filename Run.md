@@ -1,6 +1,13 @@
 # To Run The Application from the root locally (detailed):
   Note: These instructions were written followed on a Mac with smartcitiesdata(e2e:0.1.0, andi:0.64.3, reaper:0.24.9, discovery_api:0.51.4, valkyrie:1.6.5, forklift:0.17.9) and discovery_ui:1.0.0
   * Start the docker micro services needed for all apps in [smartcitiesdata](https://github.com/Datastillery/smartcitiesdata) by going inside the apps/e2e directory in your terminal and run:
+    **If it's your first time**
+      1. If you're following these instructions with the version of smartcitiesdata I am make sure you have Elixir 1.8 and Erlang 21 installed see https://github.com/Datastillery/smartcitiesdata/wiki/macOS-Setup for details. 
+      2. Then run:
+         ```bash
+         mix deps.get
+         ```
+    **After that just run**
     ```bash
     MIX_ENV=integration mix docker.start
     ```
