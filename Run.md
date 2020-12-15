@@ -48,6 +48,10 @@
       ```bash
       MIX_ENV=integration iex -S mix start
       ```
+      3. Wait a minute then press enter and type
+      ```bash
+      DiscoveryApi.Search.Elasticsearch.DatasetIndex.create()
+      ```
     * Open a new tab in your terminal and go inside the apps/valkyrie directory and run
       ```
       MIX_ENV=integration iex -S mix
