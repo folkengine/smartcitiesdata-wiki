@@ -190,7 +190,7 @@
 
       If compaction passes then city_of_columbus__2019_cota_stop_ridership_ranking__json should be empty and city_of_columbus__2019_cota_stop_ridership_ranking should now have the data.
         
-        Now, if you go to discovery_ui should be able to query the table.
+        Now, if you go to discovery_ui you should be able to query the table.
       
     * Check the kafka topics:
       * If you can't find the table for your data in presto then I would check the Kafka topics:
