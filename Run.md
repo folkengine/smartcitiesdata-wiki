@@ -166,9 +166,13 @@
         ```bash
         show tables;
         ```
-        If you can't find the tables then forklift did not create a table for the data in the dataset and I would move on to the step below where we exec into the Kafka container. If you are doing this for the first time then it should be easy to spot the tables. However, if you've ingested a lot of datasets and are coming back for reference you can also use the vim search command shortcut to find your table: '/<my_expected_table_name>'. The name of the tables forklift creates for a dataset is '<org_name_the_dataset_belongs_to>__<dataname_of_the_dataset>' and '<org_name_the_dataset_belongs_to>__<dataname_of_the_dataset>__json'. So in our example above it would be 'city_of_columbus__2019_cota_stop_ridership_ranking' and 'city_of_columbus__2019_cota_stop_ridership_ranking__json'.
+        If you can't find the tables then forklift did not create a table for the data in the dataset and I would move on to the step below where we exec into the Kafka container.
 
-        If you do see the tables then you should be able to see the the table in discovery_ui. If you can't I would suggest debugging discovery_ui. If you have a lot of tables in presto and can't find your table you could try the vim search command shortcut '/' followed by the name of the table to search for it.
+        If you are doing this for the first time then it should be easy to spot the tables. However, if you've ingested a lot of datasets and are coming back for reference you can also use the vim search command shortcut to find your table: '/<my_expected_table_name>'.
+      
+        The name of the tables forklift creates for a dataset is '<org_name_the_dataset_belongs_to>__<dataname_of_the_dataset>' and '<org_name_the_dataset_belongs_to>__<dataname_of_the_dataset>__json'. So in our example above it would be 'city_of_columbus__2019_cota_stop_ridership_ranking' and 'city_of_columbus__2019_cota_stop_ridership_ranking__json'.
+
+        If you do see the tables then you should be able to see the the dataset in discovery_ui. If you can't I would suggest debugging discovery_ui.
     * Check the kafka topics:
       * TODO
   * When you're done you can kill the docker micro services inside the e2e directory by running:
