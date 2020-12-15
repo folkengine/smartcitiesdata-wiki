@@ -154,7 +154,7 @@
        ```
        docker inspect <id_of_container>
        ```
-    * If you can't see the dataset in discovery_ui after publishing the dataset I would wait a minute(longer depending on the size of the dataset) to make sure forklift was done. After that if I still can't see it I would check to see if the dataset is in presto:
+    * If you can't see the dataset in discovery_ui after publishing the dataset I would wait a minute (longer depending on the size of the dataset) to make sure forklift was done. After that if I still can't see it I would check to see if the dataset is in presto:
       * ```bash
         docker exec -it <id_of_presto_container> presto
         ```
