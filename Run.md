@@ -185,7 +185,8 @@
       If the city_of_columbus__2019_cota_stop_ridership_ranking table doesn't have any records and city_of_columbus__2019_cota_stop_ridership_ranking__json does then I would manually run compaction inside the forklift terminal by hitting the enter key and run: 
       ```bash
       Forklift.DataWriter.compact_dataset(Forklift.Datasets.get!(<dataset_id>))
-      ``` as described earlier.
+      ```
+      as described earlier.
 
       If compaction passes then city_of_columbus__2019_cota_stop_ridership_ranking__json should be empty and city_of_columbus__2019_cota_stop_ridership_ranking should now have the data.
         
