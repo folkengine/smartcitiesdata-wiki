@@ -61,6 +61,7 @@
     
     * Open a browser and visit andi by going to https://127.0.0.1.xip.io:4443/datasets. If it is your first time you will need to login as a data curator (create a user in Auth0) and you won't see any datasets.
     * Before you can create a dataset you need to create an organization:
+      * Click 'ORGANIZATIONS'
       * click 'ADD ORGANIZATION'
       * For Organization Title type 'City of Columbus'
       * For Logo URL type 'https://s3-us-west-2.amazonaws.com/prod-os-public-data/org-logos/city_of_columbus.png'
@@ -68,7 +69,12 @@
       * For Description type 'City of Columbus'
       * For Data JSON URL type 'https://opendata.columbus.gov/data.json'
       * Click 'Save'
-    * Once you're done creating an organization you can create a dataset for that organization On the datasets page click 'ADD DATASET'
+      * You should see a dialog box that says 'Published successfully'
+      * Click 'RETURN HOME'
+      * You should now see your organization in the list of organizations
+      * Click the Home icon on the top left corner
+    * Once you're done creating an organization you can create a dataset for that organization:
+      * Click 'ADD DATASET'
       * Type '2019 COTA Stop Ridership Ranking' For Dataset Title
       * Pick '09/14/2020' for Last Updated
       * Data Name should be '2019_cota_stop_ridership_ranking'
@@ -81,6 +87,7 @@
       * Type 'Andrew Merrill' for Maintainer Name
       * Pick 'Public' for Level of Access
       * Type 'merrillaj@cota.com' for Maintainer Email
+      * Pick 'English' for Language
       * Pick your login email for Dataset Owner
       * Pick '09/14/2020' for the Release Date
       * Type 'https://www.cota.com/' for Homepage URL
@@ -93,13 +100,14 @@
       * Click 'Next'
       * You should be on the Data Dictionary.
       * Click the plus icon and type 'Year' for name, pick 'Integer' for type and pick 'TopLevel' for Child Of.
-      * Click 'ADD FIELD'
+      * Click 'ADD FIELD'. You might have to refresh the page the first time. Hopefully this bug is fixed by the time you are reading this.
       * Type a Description, for inspiration look at the Data Dictionary [for the dataset we're trying to replicate locally](https://discovery.smartcolumbusos.com/dataset/central_ohio_transit_authority/2019_cota_stop_ridership_ranking)
       * Pick 'None' for P.I.I
       * Pick 'N/A' for De-Identified
       * Pick 'None' for Demographic Traits
       * Pick 'No' for Potentially Biased
-      * Repeat the last 7 steps 12 more times, but with
+      * Click 'Save Draft'
+      * Repeat the last 8 steps 12 more times, but with
         * 'Month' for name and 'String' for type
         * 'DAY_OF_WEEK' for name and 'String' for type
         * 'UNIQUE_STOP_NUMBER' for name and 'Integer' for type
@@ -118,7 +126,12 @@
       * Pick 'HTTP'
       * Click 'Add Step'
       * Pick 'GET' for Method
-      * Pick 'https://scos-source-datasets.s3-us-west-2.amazonaws.com/2019_Jan_Dec+SRR.csv' for URL. This is where the data will come from! The Data Dictionary created earlier was based on the format of this csv file!
+      * Type 'https://scos-source-datasets.s3-us-west-2.amazonaws.com/2019_Jan_Dec+SRR.csv' for URL. This is where the data will come from! The Data Dictionary created earlier was based on the format of this csv file!
+      * Click 'Test'. You should receive a success.
+      * Click 'Save Draft'
+      * Click 'Next'
+      * You should be on Configure Upload
+      * Type 'https://scos-source-datasets.s3-us-west-2.amazonaws.com/2019_Jan_Dec+SRR.csv' for URL. This is where the data will come from! The Data Dictionary created earlier was based on the format of this csv file!
       * Click 'Test'. You should receive a success.
       * Click 'Save Draft'
       * Click 'Next'
@@ -126,11 +139,14 @@
       * Click 'Immediately'
       * Click 'Save Draft'
       * Click 'Publish'
-    * This will publish our Dataset. Reaper will gather it, Valkyrie will normalize it and Forklift will persist it.
+      * You should see a dialog box that says 'Published successfully'
+      * Click 'RETURN HOME'
+      * You should now see the datasets in the list of Datasets. TODO: Find out why it says error when there wasn't an error
+    * This published our Dataset. Reaper will gather it, Valkyrie will normalize it and Forklift will persist it.
     * Now if you go to http://localhost:9001/ you should see one dataset called 2019 COTA Stop Ridership Ranking with File Type: CSV.
     * If you click on the link you should see the details of the dataset that should look like the dataset we [copied](https://discovery.smartcolumbusos.com/dataset/central_ohio_transit_authority/2019_cota_stop_ridership_ranking).
     * However, if you click on 'Write SQL' you will not see any records.
-    * Forklift created two tables in the presto database(docker micro service): city_of_columbus__2019_cota_stop_ridership_ranking and city_of_columbus__2019_cota_stop_ridership_ranking__json. city_of_columbus__2019_cota_stop_ridership_ranking__json has the uncompacted data from the csv file and city_of_columbus__2019_cota_stop_ridership_ranking doesn't have any records. Before we can query the dataset in discovery_ui we will need to run compaction. We will do it manually, but it is also possible to create a job to do it.
+    * Forklift created two tables in the presto database(one of the docker micro services): city_of_columbus__2019_cota_stop_ridership_ranking and city_of_columbus__2019_cota_stop_ridership_ranking__json. city_of_columbus__2019_cota_stop_ridership_ranking__json has the uncompacted data from the csv file and city_of_columbus__2019_cota_stop_ridership_ranking doesn't have any records. Before we can query the dataset in discovery_ui we will need to run compaction. We will do it manually, but it is also possible to create a job to do it.
     * ON the tab running Forklift hit enter to see the interactive shell then run
       ```Forklift.DataWriter.compact_dataset(Forklift.Datasets.get!(<dataset_id>))```
       You can find the <dataset_id> in the url of the address bar of andi when you click on the dataset. The url should be https://127.0.0.1.xip.io:4443/datasets/<dataset_id>.
