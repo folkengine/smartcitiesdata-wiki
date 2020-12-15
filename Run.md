@@ -182,7 +182,14 @@
     * If you can see the dataset in discovery_ui after publishing the dataset, but can't query the table in the write sql page then I would
       check to see if forklift compacted the table.
 
-      If the city_of_columbus__2019_cota_stop_ridership_ranking table doesn't have any records and city_of_columbus__2019_cota_stop_ridership_ranking__json does then I would manually run compaction inside the forklift terminal by hitting the enter key and run ```Forklift.DataWriter.compact_dataset(Forklift.Datasets.get!(<dataset_id>))``` as described above. If compaction passes then city_of_columbus__2019_cota_stop_ridership_ranking__json should be empty and city_of_columbus__2019_cota_stop_ridership_ranking should now have the data. Now, if you go to discovery_ui should be able to query the table.
+      If the city_of_columbus__2019_cota_stop_ridership_ranking table doesn't have any records and city_of_columbus__2019_cota_stop_ridership_ranking__json does then I would manually run compaction inside the forklift terminal by hitting the enter key and run: 
+      ```bash
+      Forklift.DataWriter.compact_dataset(Forklift.Datasets.get!(<dataset_id>))
+      ``` as described earlier.
+
+      If compaction passes then city_of_columbus__2019_cota_stop_ridership_ranking__json should be empty and city_of_columbus__2019_cota_stop_ridership_ranking should now have the data.
+        
+        Now, if you go to discovery_ui should be able to query the table.
       
     * Check the kafka topics:
       * If you can't find the table for your data in presto then I would check the Kafka topics:
@@ -202,6 +209,8 @@
         ```bash
         bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic streaming-persisted
         ```
+
+        If you don't see it in either topic I would make sure you published the dataset in Andi.
   * When you're done you can kill the docker micro services inside the e2e directory by running:
     ```bash
     MIX_ENV=integration mix docker.kill
