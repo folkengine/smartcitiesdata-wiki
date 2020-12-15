@@ -140,8 +140,33 @@
     * If you want to save your work you can click the save button.
     * If you want to see your saved visualizations you can click on the folder.
   * To trouble shoot:
-    * Check to see if the dataset is in presto:
-      * TODO
+    * The first thing I would do look at output of all my terminals to see if there are any error messages.
+    * Then I would check the health of my pods
+      ```bash
+      docker ps
+      ```
+      If any of them say unhealthy it's a sign to look to look in there.
+      You can do that with:
+      ```bash
+      docker logs <id_of_container>
+      ```
+      You can also inspect the container with:
+       ```
+       docker inspect <id_of_container>
+       ```
+    * If I can't see the dataset in discovery_ui after publishing the dataset I would wait a minute(longer depending on the size of the dataset) to make sure forklift was done. After that if I still can't see it I would check to see if the dataset is in presto:
+      * ```bash
+        docker exec -it <id_of_presto_container> presto
+        ```
+        This will get you inside the presto command line interface. Then run:
+        ```bash
+        use hive.default;
+        ```
+        This the catalog and schema forklift uses to create tables. Then I would run:
+        ```bash
+        show tables;
+        ```
+        If you can't find the table then forklift did not create a table for the data in the dataset. If you do see the tables then you should be able to see the the table in discovery_ui. If you can't I would suggest debugging discovery_ui. If you have a lot of tables in presto and can't find your table you could try the vim search command shortcut '/' followed by the name of the table to search for it.
     * Check the kafka topics:
       * TODO
   * When you're done you can kill the docker micro services inside the e2e directory by running:
