@@ -154,7 +154,7 @@
        ```
        docker inspect <id_of_container>
        ```
-    * If I can't see the dataset in discovery_ui after publishing the dataset I would wait a minute(longer depending on the size of the dataset) to make sure forklift was done. After that if I still can't see it I would check to see if the dataset is in presto:
+    * If you can't see the dataset in discovery_ui after publishing the dataset I would wait a minute(longer depending on the size of the dataset) to make sure forklift was done. After that if I still can't see it I would check to see if the dataset is in presto:
       * ```bash
         docker exec -it <id_of_presto_container> presto
         ```
@@ -179,8 +179,29 @@
         So in our example above it would be 'city_of_columbus__2019_cota_stop_ridership_ranking' and 'city_of_columbus__2019_cota_stop_ridership_ranking__json'.
 
         If you do see the tables then you should be able to see the the dataset in discovery_ui. If you can't I would suggest debugging discovery_ui.
+    * If you can see the dataset in discovery_ui after publishing the dataset, but can't query the table in the write sql page then I would
+      check to see if forklift compacted the table.
+
+      If the city_of_columbus__2019_cota_stop_ridership_ranking table doesn't have any records and city_of_columbus__2019_cota_stop_ridership_ranking__json does then I would manually run compaction inside the forklift terminal by hitting the enter key and run ```Forklift.DataWriter.compact_dataset(Forklift.Datasets.get!(<dataset_id>))``` as described above. If compaction passes then city_of_columbus__2019_cota_stop_ridership_ranking__json should be empty and city_of_columbus__2019_cota_stop_ridership_ranking should now have the data. Now, if you go to discovery_ui should be able to query the table.
+      
     * Check the kafka topics:
-      * TODO
+      * If you can't find the table for your data in presto then I would check the Kafka topics:
+        ```bash
+        docker exec -it <id_of_kafka_container> bash
+        ```
+        Inside there I would `cd /opt/kafka`. Then I would check the dead letter queue with:
+        ```bash
+        bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic streaming-dead-letters
+        ```
+        If you see messages that have your data in it then you know that some application 'yeeted'(that's what we call it, because we are not really deleting the message) the message by sending it to the dead-letter-queue this should have created some logs in that app.
+        
+        Hence, Forklift never got it and that's why your tables don't exist in presto.
+        
+        If you don't see your data in the dead letter queue then it should be in the streaming-persisted topic. You can check that by running the same command as before, but with streaming-persisted instead of streaming-dead-letters.
+        
+        ```bash
+        bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --from-beginning --topic streaming-persisted
+        ```
   * When you're done you can kill the docker micro services inside the e2e directory by running:
     ```bash
     MIX_ENV=integration mix docker.kill
