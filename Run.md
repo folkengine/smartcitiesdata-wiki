@@ -6,9 +6,21 @@
       1. If you're following these instructions with the version of smartcitiesdata I am make sure you have Elixir 1.8 and Erlang 21 installed see https://github.com/Datastillery/smartcitiesdata/wiki/macOS-Setup for details. 
       2. Then run:
          ```bash
+         cd ../../
+         ```
+         to get back the root of the smartcitiesdata directory and then run:
+         ```bash
          mix deps.get
          ```
-    
+         to add the elixir dependencies. Then run
+         ```bash
+         mix compile
+         ```
+         to build your umbrella app. Then run         
+         ```bash
+         cd apps/e2e
+         ```
+         to get back to the e2e directory
     **After that just run**
     ```bash
     MIX_ENV=integration mix docker.start
