@@ -21,6 +21,7 @@
          cd apps/e2e
          ```
          to get back to the e2e directory
+
     **After that just run**
     ```bash
     MIX_ENV=integration mix docker.start
