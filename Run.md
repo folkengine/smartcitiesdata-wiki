@@ -24,7 +24,7 @@
 
     **After that just run**
     ```bash
-    MIX_ENV=integration mix docker.start
+    docker-compose -f test/whole-system.yml up
     ```
 
   * Start the needed apps for smartcitiesdata by running these commands as explained in their readme:
@@ -151,7 +151,6 @@
         * 'TRIP_AVG_DWELL' for name and 'Float' for type
         * 'DAY_AVG_DWELL' for name and 'Float' for type
         * 'RANK' for name and 'Integer' for type
-      * Click 'Save Draft'
       * Click 'Next'
       * You should be on Configure Ingest Steps.
       * Pick 'HTTP'
@@ -159,12 +158,6 @@
       * Pick 'GET' for Method
       * Type 'https://scos-source-datasets.s3-us-west-2.amazonaws.com/2019_Jan_Dec+SRR.csv' for URL. This is where the data will come from! The Data Dictionary created earlier was based on the format of this csv file!
       * Click 'Test'. You should receive a success.
-      * Click 'Save Draft'
-      * Click 'Next'
-      * You should be on Configure Upload
-      * Type 'https://scos-source-datasets.s3-us-west-2.amazonaws.com/2019_Jan_Dec+SRR.csv' for URL. This is where the data will come from! The Data Dictionary created earlier was based on the format of this csv file!
-      * Click 'Test'. You should receive a success.
-      * Click 'Save Draft'
       * Click 'Next'
       * You should be on Finalize.
       * Click 'Immediately'
@@ -172,7 +165,7 @@
       * Click 'Publish'
       * You should see a dialog box that says 'Published successfully'
       * Click 'RETURN HOME'
-      * You should now see the datasets in the list of Datasets. TODO: Find out why it says error when there wasn't an error
+      * You should now see the datasets in the list of Datasets. The Status will say Error, but just ignore that.
     * This published our Dataset. Reaper will gather it, Valkyrie will normalize it and Forklift will persist it.
     * Now if you go to http://localhost:9001/ you should see one dataset called 2019 COTA Stop Ridership Ranking with File Type: CSV.
     * If you click on the link you should see the details of the dataset that should look like the dataset we [copied](https://discovery.smartcolumbusos.com/dataset/central_ohio_transit_authority/2019_cota_stop_ridership_ranking).
