@@ -128,11 +128,10 @@
       * Type 'COTA, ridership, transit, onboarding, stop, 2019' for Keywords
       * Pick 'Medium' for Benefit
       * Pick 'Low' for Risk
-      * Click 'Save Draft'
       * Click 'Next'
       * You should be on the Data Dictionary.
       * Click the plus icon and type 'Year' for name, pick 'Integer' for type and pick 'TopLevel' for Child Of.
-      * Click 'ADD FIELD'. You might have to refresh the page the first time. Hopefully this bug is fixed by the time you are reading this.
+      * Click 'ADD FIELD'.
       * Type a Description, for inspiration look at the Data Dictionary [for the dataset we're trying to replicate locally](https://discovery.smartcolumbusos.com/dataset/central_ohio_transit_authority/2019_cota_stop_ridership_ranking)
       * Pick 'None' for P.I.I
       * Pick 'N/A' for De-Identified
