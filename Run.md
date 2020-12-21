@@ -79,7 +79,7 @@
     * For discovery_ui you might want to open a new terminal since it is a different [repo](https://github.com/SmartColumbusOS/discovery_ui) and run:
 
       **If it's your first time**
-        1. Change the port on line 1 of discovery_ui/config.js to 4001 since disocvery_api is now using that port.
+        1. Change the port on line 1 of config/config.js to 4001 since disocvery_api is now using that port.
         2. Then run
            ```bash
            npm install
