@@ -254,7 +254,8 @@
         If you don't see it in either topic I would make sure you published the dataset in Andi.
   * When you're done you can kill the docker micro services inside the e2e directory by running:
     ```bash
-    MIX_ENV=integration mix docker.kill
+    docker stop $(docker ps -aq)
+    docker rm $(docker ps -aq)
     ```
 
 # To Run The Application locally in minikube (high level):
