@@ -1,5 +1,6 @@
 # To Run The Application locally (detailed):
-  Note: These instructions were written followed on a Mac with smartcitiesdata(e2e:0.1.0, andi:0.64.3, reaper:0.24.9, discovery_api:0.51.4, valkyrie:1.6.5, forklift:0.17.9) and discovery_ui:1.0.0
+  Note: These instructions were written followed on a Mac with 
+  https://github.com/Datastillery/smartcitiesdata/commit/0a8527919847aa11040a35df78b2c35ffd1dfbcd which uses (e2e:0.1.0, andi:0.67.5, reaper:0.24.9, discovery_api:0.51.7, valkyrie:1.6.6, forklift:0.17.10) and https://github.com/SmartColumbusOS/discovery_ui/commit/e4ff38d31a7142695c44a801fb8c974c626a7e03 whose package.json has version 1.0.0
   * Start the docker micro services needed for all apps in [smartcitiesdata](https://github.com/Datastillery/smartcitiesdata) by going inside the apps/e2e directory in your terminal and run:
     
     **If it's your first time**
