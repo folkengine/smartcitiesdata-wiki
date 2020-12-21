@@ -40,11 +40,14 @@
         ```
         give your password
         and add `127.0.0.1       127.0.0.1.xip.io` to the end of the file.
-        ```
+        ```bash
         cd assets
         npm i
         ```
-        to install your node dependencies.
+        to install your node dependencies. Then back out of the assets directory.
+        ```bash
+        cd ..
+        ```
 
       **After that just run**
         ```bash
