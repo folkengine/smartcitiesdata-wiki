@@ -54,6 +54,7 @@ Data is loaded into Datasets via Ingestions. A Dataset can be fed by one or many
 
 ### Creating / Modifying Datasets
 **Metadata Setup**
+
 Proper metadata helps users and maintainers to understand what the Dataset contains, and the context for the data. 
 
 | Field  | Usage |
@@ -80,6 +81,7 @@ Proper metadata helps users and maintainers to understand what the Dataset conta
 | License  | A URL linking to the license that the Dataset falls under. This will appear in DiscoveryUI to users viewing the Dataset.  |
 
 **Data Dictionary**
+
 The Data Dictionary details each field in the Dataset. This enables UrbanOS to properly store the Dataset. The Dictionary describes the table that the data will be stored in.
 
 A user can upload a data sample and UrbanOS will attempt to pull in all relevant field names and types. This is not always a perfect process, so the Data Curator should double check that everything came in properly. 
@@ -95,6 +97,64 @@ Alternatively, the user can manually add and configure each field.
 | De-Identified  | A metadata field to represent that a field has been deidentified of PII.  |
 | Potentially Biased  | Represents that data in this field is potentially biased based on sex, gender, class, race, etc.  |
 | Rationale  | Free text field to describe why the data could potentially be biased.  |
+
+### Creating / Modifying Ingestions
+**Ingestion Setup**
+
+| Field  | Usage |
+| ------------- | ------------- |
+| Ingestion Name  | A human-readable name of the Ingestion.   |
+| Dataset Name  | The Dataset that the Ingestion will contribute to.  |
+| Source Format  | The format of the data that will be brought in with this Ingestion.  |
+
+**Configure Ingest Steps**
+These steps specify how data will be brought into UrbanOS. After filling in the necessary fields, use the “Test” button to ensure the data can be accessed successfully.
+
+There are five types of Steps that can be configured for Ingestions. Steps are executed in the order they are shown in the UI. The last step of an Ingestion must be either HTTP or S3.
+* **HTTP** – Must be the last step. Represents the information needed to get data and put it into the system.
+* **Auth** – Represents making an authentication call. If you need to call to an API to get a token, this step enables it.
+* **Date** – Allows you to fill an arbitrary field with a date in the format of your choice. Optionally includes an offset +/- time (for example, to add 5 minutes to the field). 
+* **S3** – If this step exists, it needs to be in place of HTTP. It allows you to retrieve data from a secure S3 bucket using the S3 API.
+* **Secret** – Allows you to store and retrieve a secret value from the secret store of UrbanOS (Vault). At Ingestion time, the secret is retrieved to perform the Ingestion.
+
+**HTTP Ingestion Step Type**
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Method  | GET or POST (GET represents a standard web request, while POST allows for sending a payload to the data provider if needed)  |
+| URL  | The source location of the data being ingested.  |
+| Query Parameters  | Request parameters to be sent to the data provider. For example in the URL https://example.com/over/there?name=ferret there is a query parameter with a Key of “name” and a Value of “ferret”  |
+| Headers  | Request headers to be sent to the data provider. Often used to send secret values such as API tokens, they can also be used to define other things about the request such as: “Accept-Encoding: gzip, deflate, br”. In this case, the key is “Accept-Encoding”, and the value is “gzip, deflate, br”  |
+
+**Auth Ingestion Step Type**
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Destination  | This freeform field represents where the value will be stored for later use in other extract steps. Stored values can be referenced using this format: {{thing}} where “thing” is the value of the Destination field.  |
+| URL  | The URL for the authentication server. This is where authentication HTTP requests will be sent.  |
+| Headers  | Request headers to be sent to the authentication provider. Often used to send secret values such as API tokens, they can also be used to define other things about the request such as: “Accept-Encoding: gzip, deflate, br”. In this case, the Key is “Accept-Encoding” and the Value is “gzip, deflate, br”  |
+| Body  | An HTTP request body. This will usually be in JSON format if needed. Often used to send data to an authentication server such as a username/password set.  |
+| Response Location  | This identifies where within the returned data from the authentication provider the value to be stored in Destination will be found. This will often be a token of some kind.  |
+| Cache Duration  | The time in minutes that credentials will be stored in UrbanOS.  |
+
+**Date Ingestion Step Type**
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Destination  | This freeform field represents where the date value will be stored for later use in other extract steps. Stored values can be referenced using this format: {{thing}} where “thing” is the value of the Destination field.  |
+| Time Offset Units  | The units for any time offset, with options from seconds to years.  |
+| Time Offset Value  | A numeric input aligned to the units selected of offset.  |
+| Format  | The format of the date being specified in Timex format.  |
+| Output  | This field shows a preview of the value produced by this extract step to confirm the format and offset is working as expected. NOTE: The date value is created each time the Ingestion runs.  |
+
+**S3 Ingestion Step Type**
+| First Header  | Second Header |
+| ------------- | ------------- |
+| URL  | The location of the S3 bucket for the data being ingested.  |
+| Headers  | Request headers to be sent to the S3 server. Often used to send secret values such as API tokens, they can also be used to define other things about the request such as: “Accept-Encoding: gzip, deflate, br”. In this case, the Key is “Accept-Encoding” and the Value is “gzip, deflate, br”  |
+
+**Secret Ingestion Step Type**
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Destination  | This freeform field represents where the secret value will be stored for later use in other extract steps. Stored values can be referenced using this format: {{thing}} where “thing” is the value of the Destination field.  |
+| Value  | Values entered here will be stored securely in the platform’s secret store and used in ingestions. They cannot be retrieved from this interface, only overwritten.  |
 
 
 
