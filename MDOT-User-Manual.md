@@ -24,10 +24,8 @@ To restrict Datasets more granularly, associate the Dataset with an Access Group
 | Description  | A short description of the organization. This will appear in DiscoveryUI to users viewing Datasets that belong to the Organization.  |
 | Logo URL (optional)  | A direct link to the logo for the organization. This will appear in DiscoveryUI to users viewing Datasets that belong to the Organization.  |
 | Homepage (optional)  | A URL for the organization’s homepage. This will appear in DiscoveryUI to users viewing Datasets that belong to the Organization.  |
-| Data JSON URL (optional)  | If provided, ANDI will use this URL to harvest remote Datasets from another system. It will not ingest data from them but will make them available via DiscoveryUI Search. More information about the data.json standard can be found here:
-[https://resources.data.gov/resources/dcat-us/](https://resources.data.gov/resources/dcat-us/)  |
+| Data JSON URL (optional)  | If provided, ANDI will use this URL to harvest remote Datasets from another system. It will not ingest data from them but will make them available via DiscoveryUI Search. More information about the data.json standard can be found here: [https://resources.data.gov/resources/dcat-us/](https://resources.data.gov/resources/dcat-us/)  |
 | Remote Datasets Attached to This Organization  | If a Data JSON URL is provided and the harvest process is successful, this area will show a list of Datasets from the specified location.  |
-
 
 
 # DiscoveryUI
