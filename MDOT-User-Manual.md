@@ -62,8 +62,7 @@ Proper metadata helps users and maintainers to understand what the Dataset conta
 | Data Name  | The system-assigned unique name of the Dataset.  |
 | Description  | Information about the Dataset that will be viewable by users. This will appear in DiscoveryUI to users viewing the Dataset.  |
 | Maintainer Name  | The name of the person responsible for maintaining the Dataset. This will appear in DiscoveryUI to users viewing the Dataset.  |
-| Maintainer Email  | 
-The best email address to contact the Dataset maintainer. This will appear in DiscoveryUI to users viewing the Dataset.  |
+| Maintainer Email  | The best email address to contact the Dataset maintainer. This will appear in DiscoveryUI to users viewing the Dataset.  |
 | Dataset Owner  | A specific user within the UrbanOS system who owns the Dataset. By default, this is the Curator who created the Dataset.   |
 | Release Date  | The initial date that the Dataset was released. This will appear in DiscoveryUI to users viewing the Dataset.  |
 | Update Frequency  | Free-text description of how often the data will be refreshed. This will appear in DiscoveryUI to users viewing the Dataset.  |
