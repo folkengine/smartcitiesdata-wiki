@@ -79,6 +79,24 @@ Proper metadata helps users and maintainers to understand what the Dataset conta
 | Homepage URL (optional)  | A link to the homepage for the Dataset, if applicable. This will appear in DiscoveryUI to users viewing the Dataset.  |
 | License  | A URL linking to the license that the Dataset falls under. This will appear in DiscoveryUI to users viewing the Dataset.  |
 
+**Data Dictionary**
+The Data Dictionary details each field in the Dataset. This enables UrbanOS to properly store the Dataset. The Dictionary describes the table that the data will be stored in.
+
+A user can upload a data sample and UrbanOS will attempt to pull in all relevant field names and types. This is not always a perfect process, so the Data Curator should double check that everything came in properly. 
+
+Alternatively, the user can manually add and configure each field.
+
+| Field  | Usage |
+| ------------- | ------------- |
+| Name  | The name of the selected field. This will appear in DiscoveryUI to users viewing the Dataset.  |
+| Type  | The data type associated with the field, such as string, integer, or Boolean. This will appear in DiscoveryUI to users viewing the Dataset.  |
+| Description  | A human-readable description of what the field is. This metadata will help users to correctly interpret the data. This will appear in DiscoveryUI to users viewing the Dataset.  |
+| PII  | A metadata field to represent that a field can or does contain Personally Identifiable Information.   |
+| De-Identified  | A metadata field to represent that a field has been deidentified of PII.  |
+| Potentially Biased  | Represents that data in this field is potentially biased based on sex, gender, class, race, etc.  |
+| Rationale  | Free text field to describe why the data could potentially be biased.  |
+
+
 
 
 # DiscoveryUI
