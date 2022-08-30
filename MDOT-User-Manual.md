@@ -1,8 +1,8 @@
 **Note** This manual includes planned functionality changes that are currently under development.
 
 * [Data Curator Interface (ANDI)](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#andi)
-* * [User Data Access](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#user-data-access)
-* * * [Data access controls in UrbanOS](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#data-access-controls-in-urbanos)
+ * [User Data Access](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#user-data-access)
+  * [Data access controls in UrbanOS](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#data-access-controls-in-urbanos)
 * * * [Managing Organizations](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#managing-organizations)
 * * * [Managing Access Groups](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#managing-access-groups)
 * * * [Managing Users](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#managing-users)
