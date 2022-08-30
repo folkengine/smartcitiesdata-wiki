@@ -1,5 +1,5 @@
-* Data Curator Interface (ANDI)
-* Data Discovery (DiscoveryUI)
+* [Data Curator Interface (ANDI)](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#andi)
+* [Data Discovery (DiscoveryUI) ](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#discoveryui)
 
 # ANDI
 ANDI is the visual interface for curating Datasets in UrbanOS. Users who are configured to use ANDI in Auth0 will be able to use this interface.
