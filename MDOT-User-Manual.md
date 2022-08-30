@@ -118,7 +118,7 @@ There are five types of Steps that can be configured for Ingestions. Steps are e
 * **Secret** – Allows you to store and retrieve a secret value from the secret store of UrbanOS (Vault). At Ingestion time, the secret is retrieved to perform the Ingestion.
 
 **HTTP Ingestion Step Type**
-| First Header  | Second Header |
+| Field  | Usage |
 | ------------- | ------------- |
 | Method  | GET or POST (GET represents a standard web request, while POST allows for sending a payload to the data provider if needed)  |
 | URL  | The source location of the data being ingested.  |
@@ -126,7 +126,7 @@ There are five types of Steps that can be configured for Ingestions. Steps are e
 | Headers  | Request headers to be sent to the data provider. Often used to send secret values such as API tokens, they can also be used to define other things about the request such as: “Accept-Encoding: gzip, deflate, br”. In this case, the key is “Accept-Encoding”, and the value is “gzip, deflate, br”  |
 
 **Auth Ingestion Step Type**
-| First Header  | Second Header |
+| Field  | Usage |
 | ------------- | ------------- |
 | Destination  | This freeform field represents where the value will be stored for later use in other extract steps. Stored values can be referenced using this format: {{thing}} where “thing” is the value of the Destination field.  |
 | URL  | The URL for the authentication server. This is where authentication HTTP requests will be sent.  |
@@ -136,7 +136,7 @@ There are five types of Steps that can be configured for Ingestions. Steps are e
 | Cache Duration  | The time in minutes that credentials will be stored in UrbanOS.  |
 
 **Date Ingestion Step Type**
-| First Header  | Second Header |
+| Field  | Usage |
 | ------------- | ------------- |
 | Destination  | This freeform field represents where the date value will be stored for later use in other extract steps. Stored values can be referenced using this format: {{thing}} where “thing” is the value of the Destination field.  |
 | Time Offset Units  | The units for any time offset, with options from seconds to years.  |
@@ -145,18 +145,45 @@ There are five types of Steps that can be configured for Ingestions. Steps are e
 | Output  | This field shows a preview of the value produced by this extract step to confirm the format and offset is working as expected. NOTE: The date value is created each time the Ingestion runs.  |
 
 **S3 Ingestion Step Type**
-| First Header  | Second Header |
+| Field  | Usage |
 | ------------- | ------------- |
 | URL  | The location of the S3 bucket for the data being ingested.  |
 | Headers  | Request headers to be sent to the S3 server. Often used to send secret values such as API tokens, they can also be used to define other things about the request such as: “Accept-Encoding: gzip, deflate, br”. In this case, the Key is “Accept-Encoding” and the Value is “gzip, deflate, br”  |
 
 **Secret Ingestion Step Type**
-| First Header  | Second Header |
+| Field  | Usage |
 | ------------- | ------------- |
 | Destination  | This freeform field represents where the secret value will be stored for later use in other extract steps. Stored values can be referenced using this format: {{thing}} where “thing” is the value of the Destination field.  |
 | Value  | Values entered here will be stored securely in the platform’s secret store and used in ingestions. They cannot be retrieved from this interface, only overwritten.  |
 
+### Ingestion Schema
+Like the Data Dictionary in Datasets, this section describes the fields that will come in as part of this Ingestion. The schema represents the data from the data source as it comes into the system. The names and data types in the Ingestion Schema as modified by any transformation should align with where the data is going in the target Dataset’s schema. If there are no transformations, the schema of the Ingestion and the Dataset it is feeding should be identical.
 
+A user can upload a data sample and UrbanOS will attempt to pull in all relevant field names and types. This is not always a perfect process, so the Data Curator should double check that everything came in properly. 
+
+Alternatively, the user can manually add and configure each field.
+
+### Transformations
+Transformations take a field that is coming into the Ingestion and modify it in some way. This allows UrbanOS to dynamically alter data to a desired state as it arrives. 
+
+Transformations are processed in the order they are specified in the UI. 
+
+| Transformation Type  | Description |
+| ------------- | ------------- |
+| Drop Column  | Removes a specified field from the data.  |
+| Change Field Type  | Attempts to convert a field from one type to another. E.g. an int to a string. The result can be stored in the same field (effectively replacing the original value) or in a different field.  |
+| Extract Based on Regex  | Takes a field from the source data and applies a Regex to it. The result can be stored in the same field (effectively replacing the original value) or in a different field.  |
+| Set Value  | Assigns a specified value to the field. This is useful when doing a conditional transformation, e.g. setting a “speeding” field to True when a vehicle is moving over a certain speed.  |
+| Convert DateTime Format  | Changes a DateTime field to a new format. Requires the user to specify the current format of the DateTime and the desired format using TimeEx markup.  |
+| Basic Arithmetic  | Add, subtract, multiple, or divide values in a field. The result can be stored in the same field (effectively replacing the original value) or in a different field.  |
+| Concatenate Fields  | Combine the values from two fields with an optional connection text. The result can be stored in the same field (effectively replacing the original value) or in a different field.  |
+
+### Finalizing Ingestion
+The last step is to determine when the data Ingestion will happen. 
+| Transformation Type  | Description |
+| ------------- | ------------- |
+| Immediately | This will kick off the Ingestion immediately. [Note] Currently this means the Ingestion will happen exactly once and never again. If there is an error on the Ingestion and you chose “Immediately”, you will have to recreate the Ingestion. The workaround until that is fixed is to select “Repeat” and specify an exact time and date for it to run.   |
+| Repeat  | Allows you to specify a cron job for when the Ingestion will run. Times are in UTC.  |
 
 
 # DiscoveryUI
