@@ -38,16 +38,13 @@ To restrict Datasets more granularly, associate the Dataset with an Access Group
 | Data JSON URL (optional)  | If provided, ANDI will use this URL to harvest remote Datasets from another system. It will not ingest data from them but will make them available via DiscoveryUI Search. More information about the data.json standard can be found here: [https://resources.data.gov/resources/dcat-us/](https://resources.data.gov/resources/dcat-us/)  |
 | Remote Datasets Attached to This Organization  | If a Data JSON URL is provided and the harvest process is successful, this area will show a list of Datasets from the specified location.  |
 
-![ANDI - Create or Edit Organization](https://user-images.githubusercontent.com/89024112/187693511-e4c2caa9-5bdb-41d2-9569-acdd47cf9f33.png)
 
 ## Managing Access Groups
 To manage Access Groups, add or remove Datasets or Users as needed. Selecting to Manage Datasets or Users will open a search.
 
+You can search for Users by username or their associated organization.
 
-Users can be searched for by username or their associated organization.
-
-
-Datasets can be searched for by Dataset name, associated organization, or keywords.
+You can search for Datasets by Dataset name, associated organization, or keywords.
 
 
 ## Managing Users
@@ -93,6 +90,7 @@ Proper metadata helps users and maintainers to understand what the Dataset conta
 | Homepage URL (optional)  | A link to the homepage for the Dataset, if applicable. This will appear in DiscoveryUI to users viewing the Dataset.  |
 | License  | A URL linking to the license that the Dataset falls under. This will appear in DiscoveryUI to users viewing the Dataset.  |
 
+
 ### Data Dictionary
 
 The Data Dictionary details each field in the Dataset. This enables UrbanOS to properly store the Dataset. The Dictionary describes the table that the data will be stored in.
@@ -111,6 +109,7 @@ Alternatively, the user can manually add and configure each field.
 | Potentially Biased  | Represents that data in this field is potentially biased based on sex, gender, class, race, etc.  |
 | Rationale  | Free text field to describe why the data could potentially be biased.  |
 
+
 ## Creating / Modifying Ingestions
 ### Ingestion Setup
 
@@ -119,6 +118,7 @@ Alternatively, the user can manually add and configure each field.
 | Ingestion Name  | A human-readable name of the Ingestion.   |
 | Dataset Name  | The Dataset that the Ingestion will contribute to.  |
 | Source Format  | The format of the data that will be brought in with this Ingestion.  |
+
 
 ### Configure Ingest Steps
 These steps specify how data will be brought into UrbanOS. After filling in the necessary fields, use the “Test” button to ensure the data can be accessed successfully.
