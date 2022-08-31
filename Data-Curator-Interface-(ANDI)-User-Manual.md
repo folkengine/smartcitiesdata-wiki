@@ -176,8 +176,7 @@ To restrict Datasets more granularly, associate the Dataset with an Access Group
 
 **Example**: To restrict a Private Dataset called “Private” to a single user “John Doe”, you could create an Access Group called “SingleUser”. Associate the Access Group to the “Private” Dataset and to the user “John Doe”. At that point, the Dataset would only be accessible to that single user.
 
-<img width="476" alt="image" src="https://user-images.githubusercontent.com/89024112/187734989-0547f4d3-c846-4402-a4a0-63127152f9d2.png">
-
+<img width="461" alt="image" src="https://user-images.githubusercontent.com/89024112/187736104-9320f049-baab-4d36-aa08-c19e49f5a793.png">
 
 
 ## Managing Organizations
