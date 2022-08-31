@@ -1,12 +1,12 @@
 **Note** This manual includes planned functionality changes that are currently under development.
 
   - [Exploring Datasets](#exploring-datasets)
-    - [Search](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#search)
-    - [Dataset Details](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#dataset-details)
-    - [Write SQL](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#write-sql)
-    - [Visualize](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#visualize)
-    - [Workspaces](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#workspaces)
-    - [API Key](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#api-key)
+    - [Search](#search)
+    - [Dataset Details](#dataset-details)
+    - [Write SQL](#write-sql)
+    - [Visualize](#visualize)
+    - [Workspaces](#workspaces)
+    - [API Key](#api-key)
 
 # DiscoveryUI
 DiscoveryUI is the public-facing interface for UrbanOS. It displays Datasets that the user is permitted to view based on configurations in ANDI. This can include sharing as widely as allowing unauthenticated users to view public Datasets if desired.
