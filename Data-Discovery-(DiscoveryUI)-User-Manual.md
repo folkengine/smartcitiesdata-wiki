@@ -1,7 +1,6 @@
 **Note** This manual includes planned functionality changes that are currently under development.
 
-* [Data Discovery (DiscoveryUI)](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#discoveryui)
-  - [Exploring Datasets](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#exploring-datasets)
+  - [Exploring Datasets](#exploring-datasets)
     - [Search](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#search)
     - [Dataset Details](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#dataset-details)
     - [Write SQL](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#write-sql)
