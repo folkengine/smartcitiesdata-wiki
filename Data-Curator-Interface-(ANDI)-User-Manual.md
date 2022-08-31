@@ -1,26 +1,22 @@
 **Note** This manual includes planned functionality changes that are currently under development.
 
-* [Data Curator Interface (ANDI)](#andi)
-  - [User Data Access](#user-data-access)
-    - [Data access controls in UrbanOS](#data-access-controls-in-urbanos)
-    - [Managing Organizations](#managing-organizations)
-    - [Managing Access Groups](#managing-access-groups)
-    - [Managing Users](#managing-users)
-  - [Datasets and Ingestions](#datasets-and-ingestions)
-    - [Managing Data in UrbanOS](#managing-data-in-urbanos)
-    - [Creating / Modifying Datasets](#creating--modifying-datasets)
-    - [Creating / Modifying Ingestions](#creating--modifying-ingestions)
-    - [Ingestion Schema](#ingestion-schema)
-    - [Transformations](#transformations)
-    - [Finalizing Ingestion](#finalizing-ingestion)
-  - [Datasets and Ingestions](#datasets-and-ingestions)
-
-
-# ANDI
 ANDI is the visual interface for curating Datasets in UrbanOS. Users who are configured to use ANDI in Auth0 will be able to use this interface.
 
-## User Data Access
-### Data access controls in UrbanOS
+* [User Data Access](#user-data-access)
+  - [Data access controls in UrbanOS](#data-access-controls-in-urbanos)
+  - [Managing Organizations](#managing-organizations)
+  - [Managing Access Groups](#managing-access-groups)
+  - [Managing Users](#managing-users)
+* [Datasets and Ingestions](#datasets-and-ingestions)
+  - [Managing Data in UrbanOS](#managing-data-in-urbanos)
+  - [Creating / Modifying Datasets](#creating--modifying-datasets)
+  - [Creating / Modifying Ingestions](#creating--modifying-ingestions)
+  - [Ingestion Schema](#ingestion-schema)
+  - [Transformations](#transformations)
+  - [Finalizing Ingestion](#finalizing-ingestion)
+
+# User Data Access
+## Data access controls in UrbanOS
 In UrbanOS, data access is controlled via **Organizations** and **Access Groups**. 
 
 Datasets can be made public, meaning anyone can view them.
@@ -31,7 +27,7 @@ To restrict Datasets more granularly, associate the Dataset with an Access Group
 
 **Example**: To restrict a Private Dataset called “Private” to a single user “John Doe”, you could create an Access Group called “SingleUser”. Associate the Access Group to the “Private” Dataset and to the user “John Doe”. At that point, the Dataset would only be accessible to that single user.
 
-### Managing Organizations
+## Managing Organizations
 | Field | Usage |
 | ------------- | ------------- |
 | Organization Title  | The name of the organization that will be shown to users. This will appear in DiscoveryUI to users viewing Datasets that belong to the Organization.  |
@@ -42,7 +38,7 @@ To restrict Datasets more granularly, associate the Dataset with an Access Group
 | Data JSON URL (optional)  | If provided, ANDI will use this URL to harvest remote Datasets from another system. It will not ingest data from them but will make them available via DiscoveryUI Search. More information about the data.json standard can be found here: [https://resources.data.gov/resources/dcat-us/](https://resources.data.gov/resources/dcat-us/)  |
 | Remote Datasets Attached to This Organization  | If a Data JSON URL is provided and the harvest process is successful, this area will show a list of Datasets from the specified location.  |
 
-### Managing Access Groups
+## Managing Access Groups
 To manage Access Groups, add or remove Datasets or Users as needed. Selecting to Manage Datasets or Users will open a search.
 
 
@@ -52,7 +48,7 @@ Users can be searched for by username or their associated organization.
 Datasets can be searched for by Dataset name, associated organization, or keywords.
 
 
-### Managing Users
+## Managing Users
 Users are managed through Auth0 and within ANDI. In ANDI, you can manage the Roles and Organizations associated with a user. In Auth0, you can manage a user’s access to the UrbanOS system.
 
 | Field  | Usage |
@@ -62,13 +58,13 @@ Users are managed through Auth0 and within ANDI. In ANDI, you can manage the Rol
 | Org  | The organization that the user is associated with. This affects what the user is allowed to view in UrbanOS.  |
 
 
-## Datasets and Ingestions
-### Managing Data in UrbanOS
+# Datasets and Ingestions
+## Managing Data in UrbanOS
 In UrbanOS, data is stored in **Datasets**. Datasets describe the data contained in them including the purpose of the data, the maintainer, and a data dictionary.
 Data is loaded into Datasets via Ingestions. A Dataset can be fed by one or many Ingestions. An Ingestion must be associated with one Dataset. Ingestions define how and when the data is being brought into the system and (optionally) modified before being stored in a Dataset. 
 
-### Creating / Modifying Datasets
-**Metadata Setup**
+## Creating / Modifying Datasets
+### Metadata Setup
 
 Proper metadata helps users and maintainers to understand what the Dataset contains, and the context for the data. 
 
@@ -95,7 +91,7 @@ Proper metadata helps users and maintainers to understand what the Dataset conta
 | Homepage URL (optional)  | A link to the homepage for the Dataset, if applicable. This will appear in DiscoveryUI to users viewing the Dataset.  |
 | License  | A URL linking to the license that the Dataset falls under. This will appear in DiscoveryUI to users viewing the Dataset.  |
 
-**Data Dictionary**
+### Data Dictionary
 
 The Data Dictionary details each field in the Dataset. This enables UrbanOS to properly store the Dataset. The Dictionary describes the table that the data will be stored in.
 
@@ -113,8 +109,8 @@ Alternatively, the user can manually add and configure each field.
 | Potentially Biased  | Represents that data in this field is potentially biased based on sex, gender, class, race, etc.  |
 | Rationale  | Free text field to describe why the data could potentially be biased.  |
 
-### Creating / Modifying Ingestions
-**Ingestion Setup**
+## Creating / Modifying Ingestions
+### Ingestion Setup
 
 | Field  | Usage |
 | ------------- | ------------- |
@@ -122,7 +118,7 @@ Alternatively, the user can manually add and configure each field.
 | Dataset Name  | The Dataset that the Ingestion will contribute to.  |
 | Source Format  | The format of the data that will be brought in with this Ingestion.  |
 
-**Configure Ingest Steps**
+### Configure Ingest Steps
 These steps specify how data will be brought into UrbanOS. After filling in the necessary fields, use the “Test” button to ensure the data can be accessed successfully.
 
 There are five types of Steps that can be configured for Ingestions. Steps are executed in the order they are shown in the UI. The last step of an Ingestion must be either HTTP or S3.
@@ -132,7 +128,7 @@ There are five types of Steps that can be configured for Ingestions. Steps are e
 * **S3** – If this step exists, it needs to be in place of HTTP. It allows you to retrieve data from a secure S3 bucket using the S3 API.
 * **Secret** – Allows you to store and retrieve a secret value from the secret store of UrbanOS (Vault). At Ingestion time, the secret is retrieved to perform the Ingestion.
 
-**HTTP Ingestion Step Type**
+### HTTP Ingestion Step Type
 | Field  | Usage |
 | ------------- | ------------- |
 | Method  | GET or POST (GET represents a standard web request, while POST allows for sending a payload to the data provider if needed)  |
@@ -140,7 +136,7 @@ There are five types of Steps that can be configured for Ingestions. Steps are e
 | Query Parameters  | Request parameters to be sent to the data provider. For example in the URL https://example.com/over/there?name=ferret there is a query parameter with a Key of “name” and a Value of “ferret”  |
 | Headers  | Request headers to be sent to the data provider. Often used to send secret values such as API tokens, they can also be used to define other things about the request such as: “Accept-Encoding: gzip, deflate, br”. In this case, the key is “Accept-Encoding”, and the value is “gzip, deflate, br”  |
 
-**Auth Ingestion Step Type**
+### Auth Ingestion Step Type
 | Field  | Usage |
 | ------------- | ------------- |
 | Destination  | This freeform field represents where the value will be stored for later use in other extract steps. Stored values can be referenced using this format: {{thing}} where “thing” is the value of the Destination field.  |
@@ -150,7 +146,7 @@ There are five types of Steps that can be configured for Ingestions. Steps are e
 | Response Location  | This identifies where within the returned data from the authentication provider the value to be stored in Destination will be found. This will often be a token of some kind.  |
 | Cache Duration  | The time in minutes that credentials will be stored in UrbanOS.  |
 
-**Date Ingestion Step Type**
+### Date Ingestion Step Type
 | Field  | Usage |
 | ------------- | ------------- |
 | Destination  | This freeform field represents where the date value will be stored for later use in other extract steps. Stored values can be referenced using this format: {{thing}} where “thing” is the value of the Destination field.  |
@@ -159,26 +155,26 @@ There are five types of Steps that can be configured for Ingestions. Steps are e
 | Format  | The format of the date being specified in Timex format.  |
 | Output  | This field shows a preview of the value produced by this extract step to confirm the format and offset is working as expected. NOTE: The date value is created each time the Ingestion runs.  |
 
-**S3 Ingestion Step Type**
+### S3 Ingestion Step Type
 | Field  | Usage |
 | ------------- | ------------- |
 | URL  | The location of the S3 bucket for the data being ingested.  |
 | Headers  | Request headers to be sent to the S3 server. Often used to send secret values such as API tokens, they can also be used to define other things about the request such as: “Accept-Encoding: gzip, deflate, br”. In this case, the Key is “Accept-Encoding” and the Value is “gzip, deflate, br”  |
 
-**Secret Ingestion Step Type**
+### Secret Ingestion Step Type
 | Field  | Usage |
 | ------------- | ------------- |
 | Destination  | This freeform field represents where the secret value will be stored for later use in other extract steps. Stored values can be referenced using this format: {{thing}} where “thing” is the value of the Destination field.  |
 | Value  | Values entered here will be stored securely in the platform’s secret store and used in ingestions. They cannot be retrieved from this interface, only overwritten.  |
 
-### Ingestion Schema
+## Ingestion Schema
 Like the Data Dictionary in Datasets, this section describes the fields that will come in as part of this Ingestion. The schema represents the data from the data source as it comes into the system. The names and data types in the Ingestion Schema as modified by any transformation should align with where the data is going in the target Dataset’s schema. If there are no transformations, the schema of the Ingestion and the Dataset it is feeding should be identical.
 
 A user can upload a data sample and UrbanOS will attempt to pull in all relevant field names and types. This is not always a perfect process, so the Data Curator should double check that everything came in properly. 
 
 Alternatively, the user can manually add and configure each field.
 
-### Transformations
+## Transformations
 Transformations take a field that is coming into the Ingestion and modify it in some way. This allows UrbanOS to dynamically alter data to a desired state as it arrives. 
 
 Transformations are processed in the order they are specified in the UI. 
@@ -193,7 +189,7 @@ Transformations are processed in the order they are specified in the UI.
 | Basic Arithmetic  | Add, subtract, multiple, or divide values in a field. The result can be stored in the same field (effectively replacing the original value) or in a different field.  |
 | Concatenate Fields  | Combine the values from two fields with an optional connection text. The result can be stored in the same field (effectively replacing the original value) or in a different field.  |
 
-### Finalizing Ingestion
+## Finalizing Ingestion
 The last step is to determine when the data Ingestion will happen. 
 | Transformation Type  | Description |
 | ------------- | ------------- |
