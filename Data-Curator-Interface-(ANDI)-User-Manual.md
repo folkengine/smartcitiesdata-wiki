@@ -19,9 +19,9 @@ ANDI is the visual interface for curating Datasets in UrbanOS. Users who are con
 ## Data access controls in UrbanOS
 In UrbanOS, data access is controlled via **Organizations** and **Access Groups**. 
 
-Datasets can be made public, meaning anyone can view them.
+Datasets can be made public. This will make the Dataset available to all authenticated users. UrbanOS can additionally be configured to make the Dataset available to all unauthenticated users as well.
 
-For Datasets made private, they will be available only to users within the same Organization as what is assigned to the Dataset, or to users in their Access Groups.
+For Datasets made private, they will be available only to users within the same Organization that is assigned to the Dataset, or to users in their Access Groups.
 
 To restrict Datasets more granularly, associate the Dataset with an Access Group. Datasets can be associated with any number of Access Groups. Access Groups can be assigned to any number of Datasets. Every user in an Access Group can view private Datasets associated with that Access Group.
 
