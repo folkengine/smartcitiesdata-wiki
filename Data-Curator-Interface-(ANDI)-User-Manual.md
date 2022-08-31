@@ -2,11 +2,6 @@
 
 ANDI is the visual interface for curating Datasets in UrbanOS. Users who are configured to use ANDI in Auth0 will be able to use this interface.
 
-* [User Data Access](#user-data-access)
-  - [Data access controls in UrbanOS](#data-access-controls-in-urbanos)
-  - [Managing Organizations](#managing-organizations)
-  - [Managing Access Groups](#managing-access-groups)
-  - [Managing Users](#managing-users)
 * [Datasets and Ingestions](#datasets-and-ingestions)
   - [Managing Data in UrbanOS](#managing-data-in-urbanos)
   - [Creating / Modifying Datasets](#creating--modifying-datasets)
@@ -14,47 +9,11 @@ ANDI is the visual interface for curating Datasets in UrbanOS. Users who are con
   - [Ingestion Schema](#ingestion-schema)
   - [Transformations](#transformations)
   - [Finalizing Ingestion](#finalizing-ingestion)
-
-# User Data Access
-## Data access controls in UrbanOS
-In UrbanOS, data access is controlled via **Organizations** and **Access Groups**. 
-
-Datasets can be made public. This will make the Dataset available to all authenticated users. UrbanOS can additionally be configured to make the Dataset available to all unauthenticated users as well.
-
-For Datasets made private, they will be available only to users within the same Organization that is assigned to the Dataset, or to users in their Access Groups.
-
-To restrict Datasets more granularly, associate the Dataset with an Access Group. Datasets can be associated with any number of Access Groups. Access Groups can be assigned to any number of Datasets. Every user in an Access Group can view private Datasets associated with that Access Group.
-
-**Example**: To restrict a Private Dataset called “Private” to a single user “John Doe”, you could create an Access Group called “SingleUser”. Associate the Access Group to the “Private” Dataset and to the user “John Doe”. At that point, the Dataset would only be accessible to that single user.
-
-## Managing Organizations
-| Field | Usage |
-| ------------- | ------------- |
-| Organization Title  | The name of the organization that will be shown to users. This will appear in DiscoveryUI to users viewing Datasets that belong to the Organization.  |
-| Organization Name  | Behind-the-scenes name of the Organization.  |
-| Description  | A short description of the organization. This will appear in DiscoveryUI to users viewing Datasets that belong to the Organization.  |
-| Logo URL (optional)  | A direct link to the logo for the organization. This will appear in DiscoveryUI to users viewing Datasets that belong to the Organization.  |
-| Homepage (optional)  | A URL for the organization’s homepage. This will appear in DiscoveryUI to users viewing Datasets that belong to the Organization.  |
-| Data JSON URL (optional)  | If provided, ANDI will use this URL to harvest remote Datasets from another system. It will not ingest data from them but will make them available via DiscoveryUI Search. More information about the data.json standard can be found here: [https://resources.data.gov/resources/dcat-us/](https://resources.data.gov/resources/dcat-us/)  |
-| Remote Datasets Attached to This Organization  | If a Data JSON URL is provided and the harvest process is successful, this area will show a list of Datasets from the specified location.  |
-
-
-## Managing Access Groups
-To manage Access Groups, add or remove Datasets or Users as needed. Selecting to Manage Datasets or Users will open a search.
-
-You can search for Users by username or their associated organization.
-
-You can search for Datasets by Dataset name, associated organization, or keywords.
-
-
-## Managing Users
-Users are managed through Auth0 and within ANDI. In ANDI, you can manage the Roles and Organizations associated with a user. In Auth0, you can manage a user’s access to the UrbanOS system.
-
-| Field  | Usage |
-| ------------- | ------------- |
-| Email  | This is the email address associated with the user. This field should be populated by whichever authentication program is being used and should only need updated if the user requests it.  |
-| Role  | Role controls what the user has permission to do in the ANDI Data Management Tool.  |
-| Org  | The organization that the user is associated with. This affects what the user is allowed to view in UrbanOS.  |
+* [User Data Access](#user-data-access)
+  - [Data access controls in UrbanOS](#data-access-controls-in-urbanos)
+  - [Managing Organizations](#managing-organizations)
+  - [Managing Access Groups](#managing-access-groups)
+  - [Managing Users](#managing-users)
 
 
 # Datasets and Ingestions
@@ -197,3 +156,45 @@ The last step is to determine when the data Ingestion will happen.
 | ------------- | ------------- |
 | Immediately | This will kick off the Ingestion immediately. [Note] Currently this means the Ingestion will happen exactly once and never again. If there is an error on the Ingestion and you chose “Immediately”, you will have to recreate the Ingestion. The workaround until that is fixed is to select “Repeat” and specify an exact time and date for it to run.   |
 | Repeat  | Allows you to specify a cron job for when the Ingestion will run. Times are in UTC.  |
+
+
+# User Data Access
+## Data access controls in UrbanOS
+In UrbanOS, data access is controlled via **Organizations** and **Access Groups**. 
+
+Datasets can be made public. This will make the Dataset available to all authenticated users. UrbanOS can additionally be configured to make the Dataset available to all unauthenticated users as well.
+
+For Datasets made private, they will be available only to users within the same Organization that is assigned to the Dataset, or to users in their Access Groups.
+
+To restrict Datasets more granularly, associate the Dataset with an Access Group. Datasets can be associated with any number of Access Groups. Access Groups can be assigned to any number of Datasets. Every user in an Access Group can view private Datasets associated with that Access Group.
+
+**Example**: To restrict a Private Dataset called “Private” to a single user “John Doe”, you could create an Access Group called “SingleUser”. Associate the Access Group to the “Private” Dataset and to the user “John Doe”. At that point, the Dataset would only be accessible to that single user.
+
+## Managing Organizations
+| Field | Usage |
+| ------------- | ------------- |
+| Organization Title  | The name of the organization that will be shown to users. This will appear in DiscoveryUI to users viewing Datasets that belong to the Organization.  |
+| Organization Name  | Behind-the-scenes name of the Organization.  |
+| Description  | A short description of the organization. This will appear in DiscoveryUI to users viewing Datasets that belong to the Organization.  |
+| Logo URL (optional)  | A direct link to the logo for the organization. This will appear in DiscoveryUI to users viewing Datasets that belong to the Organization.  |
+| Homepage (optional)  | A URL for the organization’s homepage. This will appear in DiscoveryUI to users viewing Datasets that belong to the Organization.  |
+| Data JSON URL (optional)  | If provided, ANDI will use this URL to harvest remote Datasets from another system. It will not ingest data from them but will make them available via DiscoveryUI Search. More information about the data.json standard can be found here: [https://resources.data.gov/resources/dcat-us/](https://resources.data.gov/resources/dcat-us/)  |
+| Remote Datasets Attached to This Organization  | If a Data JSON URL is provided and the harvest process is successful, this area will show a list of Datasets from the specified location.  |
+
+
+## Managing Access Groups
+To manage Access Groups, add or remove Datasets or Users as needed. Selecting to Manage Datasets or Users will open a search.
+
+You can search for Users by username or their associated organization.
+
+You can search for Datasets by Dataset name, associated organization, or keywords.
+
+
+## Managing Users
+Users are managed through Auth0 and within ANDI. In ANDI, you can manage the Roles and Organizations associated with a user. In Auth0, you can manage a user’s access to the UrbanOS system.
+
+| Field  | Usage |
+| ------------- | ------------- |
+| Email  | This is the email address associated with the user. This field should be populated by whichever authentication program is being used and should only need updated if the user requests it.  |
+| Role  | Role controls what the user has permission to do in the ANDI Data Management Tool.  |
+| Org  | The organization that the user is associated with. This affects what the user is allowed to view in UrbanOS.  |
