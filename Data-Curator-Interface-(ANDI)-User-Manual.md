@@ -38,6 +38,8 @@ To restrict Datasets more granularly, associate the Dataset with an Access Group
 | Data JSON URL (optional)  | If provided, ANDI will use this URL to harvest remote Datasets from another system. It will not ingest data from them but will make them available via DiscoveryUI Search. More information about the data.json standard can be found here: [https://resources.data.gov/resources/dcat-us/](https://resources.data.gov/resources/dcat-us/)  |
 | Remote Datasets Attached to This Organization  | If a Data JSON URL is provided and the harvest process is successful, this area will show a list of Datasets from the specified location.  |
 
+![ANDI - Create or Edit Organization](https://user-images.githubusercontent.com/89024112/187693511-e4c2caa9-5bdb-41d2-9569-acdd47cf9f33.png)
+
 ## Managing Access Groups
 To manage Access Groups, add or remove Datasets or Users as needed. Selecting to Manage Datasets or Users will open a search.
 
