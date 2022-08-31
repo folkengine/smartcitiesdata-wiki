@@ -15,5 +15,8 @@
     - [Code of Conduct](https://github.com/Datastillery/smartcitiesdata/wiki/Code-of-Conduct)
     - [Contributor License](https://github.com/Datastillery/smartcitiesdata/wiki/Contributor-License)
   - [Contact](https://github.com/Datastillery/smartcitiesdata/wiki/Contact)
+* User Manuals
+  - [Data Curator Interface (ANDI)](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Curator-Interface-(ANDI)-User-Manual)
+  - [Data Discovery (DiscoveryUI)](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Discovery-(DiscoveryUI)-User-Manual)
 * [Resources](https://github.com/Datastillery/smartcitiesdata/wiki/Resources)
 * [Glossary](https://github.com/Datastillery/smartcitiesdata/wiki/Glossary)
