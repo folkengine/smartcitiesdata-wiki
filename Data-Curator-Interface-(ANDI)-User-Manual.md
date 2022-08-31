@@ -17,12 +17,15 @@ ANDI is the visual interface for curating Datasets in UrbanOS. Users who are con
 
 
 # Datasets and Ingestions
-## High-level diagram of data movement in UrbanOS
-<img width="784" alt="image" src="https://user-images.githubusercontent.com/89024112/187731150-01269a6e-76c1-4d30-bf43-6433e17aa774.png">
-
 ## Managing Data in UrbanOS
 In UrbanOS, data is stored in **Datasets**. Datasets describe the data contained in them including the purpose of the data, the maintainer, and a data dictionary.
-Data is loaded into Datasets via Ingestions. A Dataset can be fed by one or many Ingestions. An Ingestion must be associated with one Dataset. Ingestions define how and when the data is being brought into the system and (optionally) modified before being stored in a Dataset. 
+
+Data is loaded into Datasets via Ingestions. A Dataset can be fed by one or many Ingestions. An Ingestion must be associated with one Dataset. Ingestions define how and when the data is being brought into the system and (optionally) modified via Transformations before being stored in a Dataset.
+
+The Dataset and associated metadata are then made available via API access or DiscoveryUI, in accordance with the configured Access Controls.
+
+<img width="784" alt="image" src="https://user-images.githubusercontent.com/89024112/187731150-01269a6e-76c1-4d30-bf43-6433e17aa774.png">
+
 
 ## Creating / Modifying Datasets
 ### Metadata Setup
@@ -172,6 +175,10 @@ For Datasets made private, they will be available only to users within the same 
 To restrict Datasets more granularly, associate the Dataset with an Access Group. Datasets can be associated with any number of Access Groups. Access Groups can be assigned to any number of Datasets. Every user in an Access Group can view private Datasets associated with that Access Group.
 
 **Example**: To restrict a Private Dataset called “Private” to a single user “John Doe”, you could create an Access Group called “SingleUser”. Associate the Access Group to the “Private” Dataset and to the user “John Doe”. At that point, the Dataset would only be accessible to that single user.
+
+<img width="476" alt="image" src="https://user-images.githubusercontent.com/89024112/187734989-0547f4d3-c846-4402-a4a0-63127152f9d2.png">
+
+
 
 ## Managing Organizations
 | Field | Usage |
