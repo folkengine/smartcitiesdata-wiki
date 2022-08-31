@@ -1,27 +1,20 @@
 **Note** This manual includes planned functionality changes that are currently under development.
 
-* [Data Curator Interface (ANDI)](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#andi)
-  - [User Data Access](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#user-data-access)
-    - [Data access controls in UrbanOS](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#data-access-controls-in-urbanos)
-    - [Managing Organizations](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#managing-organizations)
-    - [Managing Access Groups](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#managing-access-groups)
-    - [Managing Users](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#managing-users)
-  - [Datasets and Ingestions](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#datasets-and-ingestions)
-    - [Managing Data in UrbanOS](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#managing-data-in-urbanos)
-    - [Creating / Modifying Datasets](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#creating--modifying-datasets)
-    - [Creating / Modifying Ingestions](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#creating--modifying-ingestions)
-    - [Ingestion Schema](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#ingestion-schema)
-    - [Transformations](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#transformations)
-    - [Finalizing Ingestion](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#finalizing-ingestion)
-  - [Datasets and Ingestions](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#datasets-and-ingestions)
-* [Data Discovery (DiscoveryUI)](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#discoveryui)
-  - [Exploring Datasets](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#exploring-datasets)
-    - [Search](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#search)
-    - [Dataset Details](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#dataset-details)
-    - [Write SQL](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#write-sql)
-    - [Visualize](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#visualize)
-    - [Workspaces](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#workspaces)
-    - [API Key](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/MDOT-User-Manual#api-key)
+* [Data Curator Interface (ANDI)](#andi)
+  - [User Data Access](#user-data-access)
+    - [Data access controls in UrbanOS](#data-access-controls-in-urbanos)
+    - [Managing Organizations](#managing-organizations)
+    - [Managing Access Groups](#managing-access-groups)
+    - [Managing Users](#managing-users)
+  - [Datasets and Ingestions](#datasets-and-ingestions)
+    - [Managing Data in UrbanOS](#managing-data-in-urbanos)
+    - [Creating / Modifying Datasets](#creating--modifying-datasets)
+    - [Creating / Modifying Ingestions](#creating--modifying-ingestions)
+    - [Ingestion Schema](#ingestion-schema)
+    - [Transformations](#transformations)
+    - [Finalizing Ingestion](#finalizing-ingestion)
+  - [Datasets and Ingestions](#datasets-and-ingestions)
+
 
 # ANDI
 ANDI is the visual interface for curating Datasets in UrbanOS. Users who are configured to use ANDI in Auth0 will be able to use this interface.
@@ -206,27 +199,3 @@ The last step is to determine when the data Ingestion will happen.
 | ------------- | ------------- |
 | Immediately | This will kick off the Ingestion immediately. [Note] Currently this means the Ingestion will happen exactly once and never again. If there is an error on the Ingestion and you chose “Immediately”, you will have to recreate the Ingestion. The workaround until that is fixed is to select “Repeat” and specify an exact time and date for it to run.   |
 | Repeat  | Allows you to specify a cron job for when the Ingestion will run. Times are in UTC.  |
-
-
-# DiscoveryUI
-DiscoveryUI is the public-facing interface for UrbanOS. It displays Datasets that the user is permitted to view based on configurations in ANDI. This can include sharing as widely as allowing unauthenticated users to view public Datasets if desired.
-
-## Exploring Datasets
-### Search
-Datasets that the user can access are displayed. The user can search, sort, and filter to find specific Datasets. Filters shown are based on Dataset Keywords with the most common keywords at the top and the Organizations that have Datasets available to the user. The thumbnails shown for each Dataset are based on the Dataset’s Organization configuration in ANDI.
-
-
-### Dataset Details
-When a user selects a Dataset, they are brought to the Dataset Details page. This page shows a sample of the data in the Dataset, metadata describing the Dataset, and information on how to access the data via API. If a Dataset contains mapping data, a Map Preview section will be included on the page.
-
-### Write SQL
-This page allows users to query the Dataset directly from the web. From there, users can download results as a CSV or JSON file. Queries will take more or less time depending on the number of results, so limiting results to less than 20,000 is recommended to prevent page timeouts.
-
-### Visualize
-The visualization tool in DiscoveryUI is powered by Plo.ly. Users can create data visualizations using the Dataset and save them to their Workspace. Plot.ly help can be found here: [https://plotly.com/chart-studio-help/tutorials/#basic](https://plotly.com/chart-studio-help/tutorials/#basic)
-
-### Workspaces
-Workspaces allow users to save visualizations created on the Visualize page for Datasets. By saving a workspace, users will get a unique URL that goes directly to their visualization.
-
-### API Key
-**Coming Soon**
