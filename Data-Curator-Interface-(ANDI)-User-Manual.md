@@ -17,6 +17,9 @@ ANDI is the visual interface for curating Datasets in UrbanOS. Users who are con
 
 
 # Datasets and Ingestions
+## High-level diagram of data movement in UrbanOS
+<img width="784" alt="image" src="https://user-images.githubusercontent.com/89024112/187731150-01269a6e-76c1-4d30-bf43-6433e17aa774.png">
+
 ## Managing Data in UrbanOS
 In UrbanOS, data is stored in **Datasets**. Datasets describe the data contained in them including the purpose of the data, the maintainer, and a data dictionary.
 Data is loaded into Datasets via Ingestions. A Dataset can be fed by one or many Ingestions. An Ingestion must be associated with one Dataset. Ingestions define how and when the data is being brought into the system and (optionally) modified before being stored in a Dataset. 
