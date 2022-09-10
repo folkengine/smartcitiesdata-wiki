@@ -7,7 +7,7 @@ The goal of this wiki is to centralize documentation around the Smart Cities Dat
 Read on to learn about:
 * [What is the project and how it works](https://github.com/Datastillery/smartcitiesdata/wiki/The-What)
 * [What all those application names mean](https://github.com/Datastillery/smartcitiesdata/wiki/Names)
-* [How to run and use the code](https://github.com/Datastillery/smartcitiesdata/wiki/Run)
+* [How to run and use the code](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/The-How)
 * [How to contribute](https://github.com/Datastillery/smartcitiesdata/wiki/Contribute)
 * [How to contact the team for help](https://github.com/Datastillery/smartcitiesdata/wiki/Contact)
 * [Additional learning resources](https://github.com/Datastillery/smartcitiesdata/wiki/Resources)
