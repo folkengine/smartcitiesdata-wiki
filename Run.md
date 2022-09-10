@@ -41,8 +41,9 @@ From the root of the repository, run:
 ### Running Andi to describe datasets to UrbanOS
 
 Now that UrbanOS core services are running, we'll use Andi to configure an
-organzation, dataset, and ingestion. By the end of this section, you'll see data
-from a remote source stored on a database in your system, processed by UrbanOS.
+organzation, dataset, and ingestion. By the end of this section, data
+from a remote source will be stored on a database in your system,
+processed by UrbanOS.
 
 We'll ingest [this piece of json data](https://github.com/bmitchinson/json-endpoint/blob/main/meters_ingestionA.json)
 as an example, but feel free to configure an ingest for your own remote source.
