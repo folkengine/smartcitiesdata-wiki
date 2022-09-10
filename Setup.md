@@ -9,6 +9,8 @@ While you may not need all of the following, end-to-end development of the platf
 * __Helm__ - Application packaging and deployment configuration management
 * __Minikube__ - Local kubernetes development testing
 
+# VSCode
+
 An optional guide on how to configure VSCode to work well with our umbrella application is [here](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/VSCode-Elixir-Setup)
 
 # Installation Guide for Mac
