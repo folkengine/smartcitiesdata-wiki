@@ -6,7 +6,7 @@
   - [Roadmap](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Roadmap)
 * [The How](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/The-How)
   - [Setup](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Setup)
-    - [VSCode] (https://github.com/UrbanOS-Public/smartcitiesdata/wiki/VSCode-Elixir-Setup)
+    - [VSCode](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/VSCode-Elixir-Setup)
   - [Run](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Run)
   - [Contribute](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Contribute)
     - [Code of Conduct](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Code-of-Conduct)
