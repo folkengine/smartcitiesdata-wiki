@@ -2,6 +2,9 @@
 
 Here’s how to get ElixirLS working for VSCode! Please update with what works / doesn’t work for you.
 
+As of Sep 2022, ElixirLS complains about our elixir version being <11, if that dialog pops up for you while following these steps, you haven't messed anything up, we just have yet to up our elixir version to something more recent. The extension seems to function fine on our version,
+even with that warning.
+
 ## Benefits:
 
 - In editor “format on save”
