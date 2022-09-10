@@ -36,7 +36,7 @@ From the root of the repository, run:
 
 1. To setup datasets and ingestions for UrbanOS to fetch and store data, you'll
    need to also startup `Andi`. You'll need an Auth0 tenant configured for UrbanOS
-   in order to run `Andi`. ([Setting up an Urban Auth0 Tenant](https://github.com/UrbanOS-Public/auth0-setup))
+   in order to run `Andi`. ([Setting up an UrbanOS Auth0 Tenant](https://github.com/UrbanOS-Public/auth0-setup))
 
 ### Running Andi to describe datasets to UrbanOS
 
