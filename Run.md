@@ -19,7 +19,7 @@ From the root of the repository, run:
 1. `mix deps.get` to install elixir dependencies for all of the applications
    in the umbrella.
 
-1. `docker-compose -f apps/e2e/test/whole-system.yml up` to startup all
+1. `docker-compose -f apps/e2e/test/docker-compose.yml up` to startup all
    docker containers required by the UrbanOS Suite. (Kafka, Postgres, Elasticsearch, etc)
 
    - Reminder: If you'd like to run a single microservice instead of multiple,
