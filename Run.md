@@ -69,7 +69,7 @@ Note: Chromium browsers work significantly better with Andi than webkit at time 
 
    - auth_client_secret is the Client Secret in the Settings of the corresponding tenant configuration for the Andi application in Auth0.
 
-1. Open a browser and visit Andi by going to https://127.0.0.1.xip.io:4443/datasets.
+1. Open a browser and visit Andi by going to https://127.0.0.1.nip.io:4443/datasets.
    Choose login in the top corner, and create a user with the Auth0
    dialog that pops up. Each time Andi is started, it's recommended that you logout
    and login again at application launch.
