@@ -22,6 +22,8 @@ From the root of the repository, run:
 1. `docker-compose -f apps/e2e/test/docker-compose.yml up` to startup all
    docker containers required by the UrbanOS Suite. (Kafka, Postgres, Elasticsearch, etc)
 
+   - Add the `-d` flag to run in detached mode, with the compose process running in the background
+
    - Reminder: If you'd like to run a single microservice instead of multiple,
      refer to that microservice README.md in `smarcitiesdata/apps/{microservice or library}/README.md`. You'll need significantly less containers running to test only
      one microservice.
