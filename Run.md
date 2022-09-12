@@ -37,6 +37,10 @@ From the `apps/e2e` directory, run:
 
    - The core 4 services at time of writing are: `Reaper`, `Alchemist`, `Valkyrie`
      and `Forklift`. These are the recommended core services to startup individually.
+   - As mentioned, the readme files for those services will be more accurate then 
+     this guide, but at time of writing, the command to start all four is the same: 
+     `MIX_ENV=integration iex -S mix`. I run that in 4 terminal windows, in each of
+     directories of the 4 apps.
 
 1. To setup datasets and ingestions for UrbanOS to fetch and store data, you'll
    need to also startup `Andi`. You'll need an Auth0 tenant configured for UrbanOS
