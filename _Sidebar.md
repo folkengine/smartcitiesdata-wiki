@@ -7,7 +7,7 @@
 * [The How](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/The-How)
   - [Setup](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Setup)
     - [VSCode](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/VSCode-Elixir-Setup)
-  - [Run](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Run)
+  - [Running services locally](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Running-services-locally)
   - [Contribute](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Contribute)
     - [Code of Conduct](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Code-of-Conduct)
     - [Contributor License](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Contributor-License)
