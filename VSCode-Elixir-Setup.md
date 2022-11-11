@@ -16,7 +16,7 @@ even with that warning.
 
 1. Remove the `_build` and `.elixir_ls` folders from the root of `smartcitiesdata` if they exist from past attempts to use ElixirLS
 
-2. Remove any existing Elixir extensions. The [vscode-elixir extension](https://marketplace.visualstudio.com/items?itemName=mjmcloug.vscode-elixir) in particular was causing quite a few conflicts, and it’s advised in the ElixirLS readme to remove it specifically. Install the [ElixirLS: Elixir support and debugger](https://marketplace.visualstudio.com/items?itemName=JakeBecker.elixir-ls) extension. If you used to have it installed already, it's recommended to uninstall it and start with a fresh install.
+2. Remove any existing Elixir extensions. The [vscode-elixir extension](https://marketplace.visualstudio.com/items?itemName=mjmcloug.vscode-elixir) in particular was causing quite a few conflicts, and it’s advised in the ElixirLS readme to remove it specifically. Install the [ElixirLS: Elixir support and debugger](https://marketplace.visualstudio.com/items?itemName=JakeBecker.elixir-ls) extension: version `v0.11.0`. As of November 2022, newer versions of the extension do not support our version of elixir. If you used to have it installed already, it's recommended to uninstall it and start with a fresh install.
 
 3. Open a smart cities data app in vscode, or the entirity of `smartcitiesdata` and you should see the following notification.
 
