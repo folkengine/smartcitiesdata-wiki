@@ -67,6 +67,7 @@ Alternatively, the user can manually add and configure each field.
 | Field  | Usage |
 | ------------- | ------------- |
 | Name  | The name of the selected field. This will appear in DiscoveryUI to users viewing the Dataset.  |
+| Selector  | Required on XML ingestions, this is an [xpath](https://en.wikipedia.org/wiki/XPath) reference to the location of the desired data. |
 | Type  | The data type associated with the field, such as string, integer, or Boolean. This will appear in DiscoveryUI to users viewing the Dataset.  |
 | Description  | A human-readable description of what the field is. This metadata will help users to correctly interpret the data. This will appear in DiscoveryUI to users viewing the Dataset.  |
 | PII  | A metadata field to represent that a field can or does contain Personally Identifiable Information.   |
@@ -83,6 +84,7 @@ Alternatively, the user can manually add and configure each field.
 | Ingestion Name  | A human-readable name of the Ingestion.   |
 | Dataset Name  | The Dataset that the Ingestion will contribute to.  |
 | Source Format  | The format of the data that will be brought in with this Ingestion.  |
+| Top Level Selector  | A required [xpath](https://en.wikipedia.org/wiki/XPath) for XML ingestions, or an optional [JSONPath](https://docs.oracle.com/cd/E60058_01/PDF/8.0.8.x/8.0.8.0.0/PMF_HTML/JsonPath_Expressions.htm) for JSON ingestions, to specify the precise location of desired data. |
 
 
 ### Configure Ingest Steps
