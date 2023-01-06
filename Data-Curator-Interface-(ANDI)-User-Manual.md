@@ -84,7 +84,7 @@ Alternatively, the user can manually add and configure each field.
 | Ingestion Name  | A human-readable name of the Ingestion.   |
 | Dataset Name  | The Dataset that the Ingestion will contribute to.  |
 | Source Format  | The format of the data that will be brought in with this Ingestion.  |
-| Top Level Selector  | A required [xpath](https://en.wikipedia.org/wiki/XPath) for XML ingestions, or an optional [JSONPath](https://docs.oracle.com/cd/E60058_01/PDF/8.0.8.x/8.0.8.0.0/PMF_HTML/JsonPath_Expressions.htm) for JSON ingestions, to specify the precise location of desired data. |
+| Top Level Selector  | A required [xpath](https://en.wikipedia.org/wiki/XPath) for XML ingestions, or an optional [JSONPath](https://docs.oracle.com/cd/E60058_01/PDF/8.0.8.x/8.0.8.0.0/PMF_HTML/JsonPath_Expressions.htm) for JSON or GeoJSON ingestions, to specify the precise location of desired data. |
 
 
 ### Configure Ingest Steps
