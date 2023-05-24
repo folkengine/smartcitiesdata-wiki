@@ -1,1 +1,0 @@
-[Kubernetes Resources](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Kubernetes-Resources)
