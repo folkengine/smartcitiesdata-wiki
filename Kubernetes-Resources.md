@@ -1,0 +1,5 @@
+| Name | Type | Release | Description | Safe to delete? | Secrets | Kustomized? | Managed by Operator? | Chart repository | Triage Flow/Troubleshooting Docs |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| andi-* | Pod | UrbanOS | This pod hosts the ANDI front end | Yes, it will restart | andi.postgres.password, andi.auth.auth0_client_secret, global.objectStore.accessKey, global.objectStore.accessSecret | No | No | https://github.com/UrbanOS-Public/charts/tree/master/charts/andi | NA |
+| discovery-api-* | Pod | UrbanOS | This pod hosts the discovery API microservice. It can be directly queried via API externally or used by DiscoveryUI as a backend  | Yes, it will restart. | discovery-api.secrets.discoveryApiPresignKey, discovery-api.secrets.guardianSecretKey, discovery-api.postgres.password, global.objectStore.accessKey, global.objectStore.accessSecret | No | No | https://github.com/UrbanOS-Public/charts/tree/master/charts/discovery-api | NA |
+
