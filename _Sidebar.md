@@ -15,5 +15,7 @@
 * User Manuals
   - [Data Curator Interface (ANDI)](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Curator-Interface-(ANDI)-User-Manual)
   - [Data Discovery (DiscoveryUI)](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Discovery-(DiscoveryUI)-User-Manual)
+* Troubleshooting
+  - [Kubernetes Resources](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Troubleshooting)
 * [Resources](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Resources)
 * [Glossary](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Glossary)
