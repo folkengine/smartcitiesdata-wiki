@@ -1,5 +1,3 @@
-# Kubernetes Resource
-
 The UrbanOS platform uses kubernetes to host both the core microservice applications as well as external applications, such as Redis. The core applications can optionally be configured to connect to managed cloud services for external dependencies. If external dependencies are enabled and configured as part of the UrbanOS helm release, they will be managed under helm and hosted on the kubernetes cluster instead of a managed cloud service.
 
 Core Microservice applications can be found here: https://github.com/UrbanOS-Public/smartcitiesdata
