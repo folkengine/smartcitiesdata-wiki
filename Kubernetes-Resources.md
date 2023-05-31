@@ -28,7 +28,6 @@ This is a list of the various applications used in the UrbanOS platform. Externa
 | Trino | Trino is a tool designed to efficiently query vast amounts of data using distributed queries. Trino is the only way to read/write data to/from the persisted data stack. | External | Yes |
 | Valkyrie | Microservice used to validate and standardize data. If incoming data is of the wrong data type, but can be converted, valkyrie will standardize the data. If incoming data cannot be standardize, valkyrie rejects the data. | Core | Yes |
 | Vault | Vault is a secret store that can be deployed on kubernetes. It allows for fine-grained access control. It is only used for the "Secret" ingestion extract step. It is not used for user credentials. | External | Yes |
-| = |  ============================= | = | = |
 
 
 
