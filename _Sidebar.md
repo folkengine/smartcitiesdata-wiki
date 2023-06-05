@@ -14,6 +14,8 @@
   - [Contact](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Contact)
 * Events
   - [Ingestion Update](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Ingestion-Update)
+* Entities
+  - [Ingestion] (https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Ingestion)
 * User Manuals
   - [Data Curator Interface (ANDI)](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Curator-Interface-(ANDI)-User-Manual)
   - [Data Discovery (DiscoveryUI)](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Discovery-(DiscoveryUI)-User-Manual)
