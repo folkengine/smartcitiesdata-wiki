@@ -6,8 +6,9 @@ Result: All services save the latest ingestion entity. Reaper schedules extracti
 # Schema
 
 | Field Name | Type | Constant |
-| - | - |
-| type | string | "dataset:update" |
-
+| - | - | - |
+| type | string | "ingestion:update" |
+| data | %SmartCity.Ingestion | - |
+| author | string | - |
 
 Performance: Negligible
