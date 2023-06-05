@@ -8,7 +8,7 @@ Result: All services save the latest ingestion entity. Reaper schedules extracti
 | Field Name | Type | Constant |
 | - | - | - |
 | type | string | "ingestion:update" |
-| data | %SmartCity.Ingestion | - |
+| data | [Ingestion](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Ingestion) | - |
 | author | string | - |
 
 Performance: Negligible
