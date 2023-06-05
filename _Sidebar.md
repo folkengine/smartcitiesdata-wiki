@@ -12,6 +12,8 @@
     - [Code of Conduct](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Code-of-Conduct)
     - [Contributor License](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Contributor-License)
   - [Contact](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Contact)
+* Events
+  - [Ingestion Update]()
 * User Manuals
   - [Data Curator Interface (ANDI)](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Curator-Interface-(ANDI)-User-Manual)
   - [Data Discovery (DiscoveryUI)](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Discovery-(DiscoveryUI)-User-Manual)
