@@ -2,7 +2,9 @@
 
 ## Invalid URL/Headers/Params
 
-##### Possible User Experiences
+### Error Indicators
+
+##### User Flags
 - Ingestion is submitted, but no data appears in DiscoveryUI
 
 ##### Example Log Messages
