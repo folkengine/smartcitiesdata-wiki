@@ -21,5 +21,6 @@
   - [Data Discovery (DiscoveryUI)](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Discovery-(DiscoveryUI)-User-Manual)
 * Troubleshooting
   - [Kubernetes Resources](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Kubernetes-Resources)
+    - [Reaper](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Reaper)
 * [Resources](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Resources)
 * [Glossary](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Glossary)
