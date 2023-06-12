@@ -21,6 +21,10 @@
   - [Data Discovery (DiscoveryUI)](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Discovery-(DiscoveryUI)-User-Manual)
 * Troubleshooting
   - [Kubernetes Resources](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Kubernetes-Resources)
+    - [Alchemist](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Alchemist)
+    - [Andi](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Andi)
+    - [Forklift](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Forklift)
     - [Reaper](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Reaper)
+    - [Valkyrie](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Valkyrie)
 * [Resources](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Resources)
 * [Glossary](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Glossary)
