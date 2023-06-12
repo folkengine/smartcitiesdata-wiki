@@ -35,3 +35,12 @@ As the user is troubleshooting the issue, they can utilize the test button provi
 
 ***
 
+## Vault is down
+
+##### Possible User Experiences
+- A previously working ingestion utilizing secrets is no longer working
+
+### Resolution
+This is likely due to vault being down.
+
+***TODO***
