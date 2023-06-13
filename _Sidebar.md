@@ -13,6 +13,7 @@
     - [Contributor License](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Contributor-License)
   - [Contact](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Contact)
 * Events
+  - [Dataset Update](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Dataset-Update)
   - [Ingestion Update](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Ingestion-Update)
   - [Ingestion Delete](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Ingestion-Delete)
   - [Organization Update](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Organization-Update)
