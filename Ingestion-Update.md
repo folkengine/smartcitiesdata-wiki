@@ -11,7 +11,7 @@ The `ingestion_update` event is published from Andi to the EventStream when a Cu
 
 | Field Name | Type | Description | Enum Values |
 | - | - | - | - |
-| type | string | Identifier of the event type. Used to filter and receive events | "ingestion:update" |
+| type | string | Identifier of the event type. Used to filter and receive events | ingestion:update |
 | data | [Ingestion](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Ingestion) | The Ingestion entity that has been published from Andi. | - |
 | author | string | The identifier of who sent the event. | - |
 
