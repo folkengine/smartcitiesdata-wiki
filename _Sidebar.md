@@ -27,6 +27,7 @@
   - [User Login](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/User-Login)
 * Entities
   - [Ingestion](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Ingestion)
+  - [Dataset](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Dataset)
 * User Manuals
   - [Data Curator Interface (ANDI)](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Curator-Interface-(ANDI)-User-Manual)
   - [Data Discovery (DiscoveryUI)](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Discovery-(DiscoveryUI)-User-Manual)
