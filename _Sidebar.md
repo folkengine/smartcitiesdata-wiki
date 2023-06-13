@@ -16,6 +16,7 @@
   - [Ingestion Update](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Ingestion-Update)
   - [Ingestion Delete](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Ingestion-Delete)
   - [Organization Update](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Organization-Update)
+  - [User Organization Associate](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/User-Organization-Association)
 * Entities
   - [Ingestion](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Ingestion)
 * User Manuals
