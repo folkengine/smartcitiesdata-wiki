@@ -21,6 +21,7 @@
   - [User Login](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/User-Login)
   - [Data Extract Start](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Extract-Start)
   - [Data Ingest Start](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Ingest-Start)
+  - [Data Ingest End](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Ingest-End)
 * Entities
   - [Ingestion](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Ingestion)
 * User Manuals
