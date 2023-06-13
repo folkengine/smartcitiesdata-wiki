@@ -20,6 +20,7 @@
   - [User Organization Disassociate](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/User-Organization-Disassociate)
   - [User Login](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/User-Login)
   - [Data Extract Start](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Extract-Start)
+  - [Data Ingest Start](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Ingest-Start)
 * Entities
   - [Ingestion](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Ingestion)
 * User Manuals
