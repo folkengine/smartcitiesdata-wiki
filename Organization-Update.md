@@ -1,6 +1,6 @@
 # Overview
 
-The `organization_update` event is published from Andi to the EventStream when a Curator creates or modifies the configuration for an Organization within the Andi interface. This message is how core services in the system stay in sync regarding Organizations. Each core service creates a topic and any other initialization needed to be ready to receive extracted data from that ingestion.
+The `organization_update` event is published from Andi to the EventStream when a Curator creates or modifies the configuration for an Organization within the Andi interface. This message is how core services in the system stay in sync regarding Organizations.
 
 # Diagram
 
