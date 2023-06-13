@@ -14,6 +14,7 @@
   - [Contact](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Contact)
 * Events
   - [Ingestion Update](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Ingestion-Update)
+  - [Ingestion Delete](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Ingestion-Delete)
 * Entities
   - [Ingestion](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Ingestion)
 * User Manuals
