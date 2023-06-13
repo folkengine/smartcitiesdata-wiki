@@ -18,6 +18,7 @@
   - [Organization Update](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Organization-Update)
   - [User Organization Associate](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/User-Organization-Association)
   - [User Organization Disassociate](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/User-Organization-Disassociate)
+  - [User Login](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/User-Login)
 * Entities
   - [Ingestion](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Ingestion)
 * User Manuals
