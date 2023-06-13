@@ -14,6 +14,7 @@
   - [Contact](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Contact)
 * Events
   - [Dataset Update](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Dataset-Update)
+  - [Dataset Delete](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Delete-Dataset)
   - [Ingestion Update](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Ingestion-Update)
   - [Ingestion Delete](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Ingestion-Delete)
   - [Organization Update](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Organization-Update)
