@@ -33,7 +33,6 @@
   - [Data Discovery (DiscoveryUI)](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Discovery-(DiscoveryUI)-User-Manual)
 * Troubleshooting
   - [Triage Flows] ()
-    - [No Columns in Preview Table] ()
   - [Alchemist](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Alchemist)
   - [Andi](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Andi)
   - [Forklift](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Forklift)
