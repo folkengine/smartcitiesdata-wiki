@@ -32,7 +32,7 @@
   - [Data Curator Interface (ANDI)](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Curator-Interface-(ANDI)-User-Manual)
   - [Data Discovery (DiscoveryUI)](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Data-Discovery-(DiscoveryUI)-User-Manual)
 * Troubleshooting
-  - [Triage Flows] ()
+  - [Triage Flows] (https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Triage-Flows)
   - [Alchemist](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Alchemist)
   - [Andi](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Andi)
   - [Forklift](https://github.com/UrbanOS-Public/smartcitiesdata/wiki/Forklift)
