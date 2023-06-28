@@ -1,19 +1,21 @@
 # Valkyrie Troubleshooting
 
-## Error name
+## Validation Failure
 
 ### Error Indicators
 ##### User Flags
-- What would the user experience when this occurs?
+- What would the user experience when this occurs? 
 
-##### Admin Flags
-- What would an admin see that indicates this error?
+When a user creates a new Ingestion, some of the data in Discovery UI will either not exist entirely or partially populate. 
+
 
 ##### Example Log Messages
 - What does a log message look like in the pod for this error?
 
-##### Example Deadletter Message
-- What does a deadletter message on the dead-letter topic look like for this error
+`18:46:02.972 [error] ingestion_id: ec3a487c-bcad-438b-99af-f03cf5f54a0c; payload: %{"MyNumber1" => "Invalid String", "MyNumber2" => 2, "MyString1" => "Hello", "MyString2" => "World"}; Failed Schema Validation: %{"MyNumber1" => :invalid_integer}`
+
 
 ### Resolution
-- What can be done to resolve this?
+- What can be done to resolve this? 
+
+The user either needs to fix the data type in the ingestion that is failing, or they need to change their data source to something that matches the format of the dataset. 
