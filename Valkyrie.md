@@ -18,6 +18,6 @@ When a user creates a new Ingestion, some of the data in Discovery UI will eithe
 ### Resolution
 - What can be done to resolve this? 
 
-1. The user either needs to change the data type in the Data Dictionary/Schema of the target dataset
+1. Change the data type in the Data Dictionary/Schema of the target dataset
 2. Verify the incoming data is consistent
 3. Use Transformations to convert the incoming data into the type required
