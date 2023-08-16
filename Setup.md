@@ -111,11 +111,25 @@ env variable set.
 There's some weird mac hiccups where openssl is not available to erlang when
 erlang is being compiled by kerl. [asdf erlang Dealing with OpenSSL issues on macOS](https://github.com/asdf-vm/asdf-erlang#dealing-with-openssl-issues-on-macos)
 
-First make sure `brew --prefix openssl@1.1` returns a filepath to a valid openssl
-install. If not, run `brew install openssl`, and try again.
+Make sure openssl@1.1 is installed
+```
+brew install openssl@1.1
+```
+
+Check current openssl version
+```
+brew list --versions openssl
+```
+
+Unlink the current version of SSL and link the older version
+```
+brew unlink openssl@<version>
+brew link opebssl@1.1
+```
 
 ```
 asdf uninstall erlang <version>
 export KERL_CONFIGURE_OPTIONS="--without-javac --with-ssl=$(brew --prefix openssl@1.1)"
 asdf install erlang <version>
 ```
+
